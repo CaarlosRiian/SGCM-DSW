@@ -3,33 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/cadastro.css">
-    <title>Cadastro</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <title>Login</title>
 </head>
 <body>
-    <div class="container-content-register">
-        <div class="content-register">
+    <div class="container-content-login">
+        <div class="content-login">
             <div id="container-1">
                 <img src="images/logo-PNG.png" alt="image-logo" class="image-logo">
                 <h1 class="h1-principal">ConsultaFácil</h1>
             </div>
             <h1 id="linha-separadora"></h1>
-            <h2 class="h2-cadastrar">Cadastre-se</h2>
+            <h2 class="h2-logar">Logar-se</h2>
             <div id="container-2">
                 <form action="#">
                     <p class="p1-form-user">Nome de usuário</p>
                     <input type="text" placeholder="Usuário" class="input-user">
-                    <p class="p2-form-email">E-mail</p>
-                    <input type="email" placeholder="email@email.com" class="input-email">
-                    <p class="p3-form-pass">Senha</p>
+                    <p class="p2-form-pass">Senha</p>
                     <input type="password" placeholder="Digite sua senha" class="input-pass">
-                    <p class="p4-form-cpass">Confirmar Senha</p>
-                    <input type="password" placeholder="Digite sua senha" class="input-c-pass">
                 </form>
             </div>
             <div id="container-3">
-                <input type="submit" value="Cadastrar"     class="button-register">
-                <p class="p-other-option">Caso já possua uma conta, <a   href="login.html">Logar-se</a></p>
+                <a href="home.html">
+                    <input type="submit" value="Logar"     class="button-register">
+                </a>
+                <p class="p-other-option">Não possui uma conta? <a   href="cadastro.html">Cadastre-se</a></p>
             </div>
         </div> 
     </div>
