@@ -177,6 +177,28 @@ a { /* Esse A aqui é o link do header*/
     transform: translate(-50%, -50%);
 }
 
+.barra-separadora-2 {
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+    color: rgb(177, 177, 177);
+
+    position: absolute;
+    top: 40%;
+    left: 21%;
+    transform: translate(-50%, -50%);
+}
+
+.mini-map-name-doctor-2 {
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+    color: rgb(177, 177, 177);
+
+    position: absolute;
+    top: 40%;
+    left: 28.5%;
+    transform: translate(-50%, -50%);
+}
+
 .linha-separadora {
     border-bottom: 1px solid rgb(177, 177, 177);
 
@@ -248,64 +270,14 @@ a { /* Esse A aqui é o link do header*/
     transform: translate(-50%, -50%);
 }
 
-.rate-stars {
-    width: 150px;
-    height: 30px;
+.h2-date {
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
 
     position: absolute;
-    top: 60%;
-    left: 26%;
-    transform: translate(-50%, -50%);
-}
-
-.star-1 {
-    width: 25px;
-    height: 25px;
-
-    position: relative;
-    top: 50%;
-    left: 5%;
-    transform: translate(-50%, -50%);
-}
-
-.star-2 {
-    width: 25px;
-    height: 25px;
-
-    position: relative;
-    top: 50%;
-    left: 5%;
-    transform: translate(-50%, -50%);
-}
-
-.star-3 {
-    width: 25px;
-    height: 25px;
-
-    position: relative;
-    top: 50%;
-    left: 5%;
-    transform: translate(-50%, -50%);
-}
-
-.star-4 {
-    width: 25px;
-    height: 25px;
-
-    position: relative;
-    top: 50%;
-    left: 5%;
-    transform: translate(-50%, -50%);
-}
-
-.star-5 {
-    width: 25px;
-    height: 25px;
-
-    position: relative;
-    top: 50%;
-    left: 5%;
-    transform: translate(-50%, -50%);
+    top: 75%;
+    left: 34%;
+    transform: translate(-50%, -50%); 
 }
 
 .button-rate {
@@ -319,8 +291,8 @@ a { /* Esse A aqui é o link do header*/
     font-family: "Inter", sans-serif;
 
     position: relative;
-    top: 50%;
-    left: 450%;
+    top: 55%;
+    left: 70%;
     transform: translate(-50%, -50%);
 }
 
@@ -336,30 +308,30 @@ a { /* Esse A aqui é o link do header*/
     width: 535px;
 
     position: relative;
-    top: 99%;
-    left: 40%;
+    top: 85%;
+    left: 25%;
     transform: translate(-50%, -50%);
 }
 
 /* End of Info Doctor */
 
-/* TimeTable */
+/* Check Consultation */
 
-.container-timetable {
+.container-details {
     width: 80%;
-    height: 550px;
+    height: 500px;
 
-    /* border: 1px solid black; */
+    border: 1px solid black;
 
     position: absolute;
-    top: 89%;
+    top: 87%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.h1-timetable {
-    font-family: "Jura", sans-serif;
-    font-size: 22px;
+.h1-container-details {
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
 
     position: absolute;
     top: 5%;
@@ -367,246 +339,99 @@ a { /* Esse A aqui é o link do header*/
     transform: translate(-50%, -50%);
 }
 
-.timetable-cards {
-    width: 100%;
-    height: 90%;
-
-    /* border: 1px solid black; */
+.check-consultation {
+    width: 65%;
+    height: 40px;
 
     position: absolute;
-    top: 55%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.h2-timetable-cards {
-    font-family: "Jura", sans-serif;
-    font-size: 22px;
+.verification-1 {
+    width: 30px;
+    height: 30px;
 
     position: absolute;
-    top: 6%;
-    left: 10%;
+    top: 50%;
+    left: 13%;
     transform: translate(-50%, -50%);
 }
 
-.timetable-card-1 {
-    width: 330px;
-    height: 150px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
+.p-container-details-1 {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
 
     position: absolute;
-    top: 30%;
-    left: 15.5%;
+    top: 50%;
+    left: 25%;
     transform: translate(-50%, -50%);
 }
 
-.timetable-h2-card-1 {
-    font-family: "Jura", sans-serif;
-    font-size: 15px;
-    width: 57%;
+.verification-2 {
+    width: 30px;
+    height: 30px;
 
-    /* border: 1px solid black; */
     position: absolute;
-    top: 10%;
-    left: 35%;
+    top: 50%;
+    left: 40%;
     transform: translate(-50%, -50%);
 }
 
-.timetable-p-card-1 {
-    font-family: "Jura", sans-serif;
-    font-size: 15px;
+.p-container-details-2 {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
 
-    width: 35%;
-
-    /* border: 1px solid black; */
     position: absolute;
-    top: 25%;
-    left: 24%;
+    top: 50%;
+    left: 52%;
     transform: translate(-50%, -50%);
 }
 
-.timetable-time-card-1 {
-    font-family: "Jura", sans-serif;
-    font-size: 20px;
-    text-align: center;
-    width: 100%;
+.verification-3 {
+    width: 30px;
+    height: 30px;
 
-    /* border: 1px solid black; */
+    position: absolute;
+    top: 50%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+}
+
+.p-container-details-3 {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+
+    position: absolute;
+    top: 50%;
+    left: 78%;
+    transform: translate(-50%, -50%);
+}
+
+/* End of Check Consultation */
+
+/* Content Details */
+
+.content-details {
+    width: 80%;
+    height: 200px;
+    border: 1px solid black;
+
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.timetable-button-card-1 {
-    width: 150px;
-    height: 30px;
-    border: none;
-    color: white;
-    background-color: #00CCBE;
-    border-radius: 4px;
+.calendar {
+    width: 25px;
+    height: 25px;
 
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.timetable-button-card-1:hover {
-    background-color: #09988f;
-    transition: 0.4s;
-    cursor: pointer;
-}
-
-.timetable-card-2 {
-    width: 330px;
-    height: 150px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-
-    position: absolute;
-    top: 30%;
-    left: 48%;
-    transform: translate(-50%, -50%);
-}
-
-.timetable-h2-card-2 {
-    font-family: "Jura", sans-serif;
-    font-size: 15px;
-    width: 57%;
-
-    /* border: 1px solid black; */
     position: absolute;
     top: 10%;
-    left: 35%;
+    left: 2%;
     transform: translate(-50%, -50%);
 }
 
-.timetable-p-card-2 {
-    font-family: "Jura", sans-serif;
-    font-size: 15px;
-
-    width: 35%;
-
-    /* border: 1px solid black; */
-    position: absolute;
-    top: 25%;
-    left: 24%;
-    transform: translate(-50%, -50%);
-}
-
-.timetable-time-card-2 {
-    font-family: "Jura", sans-serif;
-    font-size: 20px;
-    text-align: center;
-    width: 100%;
-
-    /* border: 1px solid black; */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.timetable-button-card-2 {
-    width: 150px;
-    height: 30px;
-    border: none;
-    color: white;
-    background-color: #00CCBE;
-    border-radius: 4px;
-
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.timetable-button-card-2:hover {
-    background-color: #09988f;
-    transition: 0.4s;
-    cursor: pointer;
-}
-
-.h2-timetable-cards-2 {
-    font-family: "Jura", sans-serif;
-    font-size: 22px;
-
-    position: absolute;
-    top: 55%;
-    left: 8.4%;
-    transform: translate(-50%, -50%);
-}
-
-.timetable-card-3 {
-    width: 330px;
-    height: 150px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-
-    position: absolute;
-    top: 78%;
-    left: 15.5%;
-    transform: translate(-50%, -50%);
-}
-
-.timetable-h2-card-3 {
-    font-family: "Jura", sans-serif;
-    font-size: 15px;
-    width: 57%;
-
-    /* border: 1px solid black; */
-    position: absolute;
-    top: 10%;
-    left: 35%;
-    transform: translate(-50%, -50%);
-}
-
-.timetable-p-card-3 {
-    font-family: "Jura", sans-serif;
-    font-size: 15px;
-
-    width: 35%;
-
-    /* border: 1px solid black; */
-    position: absolute;
-    top: 25%;
-    left: 24%;
-    transform: translate(-50%, -50%);
-}
-
-.timetable-time-card-3 {
-    font-family: "Jura", sans-serif;
-    font-size: 20px;
-    text-align: center;
-    width: 100%;
-
-    /* border: 1px solid black; */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.timetable-button-card-3 {
-    width: 150px;
-    height: 30px;
-    border: none;
-    color: white;
-    background-color: #00CCBE;
-    border-radius: 4px;
-
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.timetable-button-card-3:hover {
-    background-color: #09988f;
-    transition: 0.4s;
-    cursor: pointer;
-}
-
-/* End of TimeTable */
+/* End of Content Details */
