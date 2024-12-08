@@ -270,16 +270,6 @@ a { /* Esse A aqui é o link do header*/
     transform: translate(-50%, -50%);
 }
 
-.h2-date {
-    font-family: "Inter", sans-serif;
-    font-size: 17px;
-
-    position: absolute;
-    top: 75%;
-    left: 34%;
-    transform: translate(-50%, -50%); 
-}
-
 .button-rate {
     width: 170px;
     height: 35px;
@@ -303,15 +293,29 @@ a { /* Esse A aqui é o link do header*/
     
 }
 
-.linha-separadora-2 {
-    border-bottom: 1px solid rgb(177, 177, 177);
-    width: 535px;
+.button-report {
+    width: 170px;
+    height: 35px;
+    background-color: #DC3545;
+    border: none;
+    border-radius:4px;
+    color: white;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
 
     position: relative;
-    top: 85%;
-    left: 25%;
+    top: 30%;
+    left: 54%;
     transform: translate(-50%, -50%);
 }
+
+.button-report:hover {
+    background-color: #f63246;
+    transition: 0.4s;
+    cursor: pointer;
+    
+}
+
 
 /* End of Info Doctor */
 
@@ -320,8 +324,6 @@ a { /* Esse A aqui é o link do header*/
 .container-details {
     width: 80%;
     height: 500px;
-
-    border: 1px solid black;
 
     position: absolute;
     top: 87%;
@@ -414,9 +416,8 @@ a { /* Esse A aqui é o link do header*/
 /* Content Details */
 
 .content-details {
-    width: 80%;
+    width: 90%;
     height: 200px;
-    border: 1px solid black;
 
     position: absolute;
     top: 50%;
@@ -425,13 +426,148 @@ a { /* Esse A aqui é o link do header*/
 }
 
 .calendar {
-    width: 25px;
-    height: 25px;
+    width: 32px;
+    height: 32px;
 
     position: absolute;
-    top: 10%;
-    left: 2%;
+    top: 35%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.p-calendar {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.tag-price {
+    width: 32px;
+    height: 32px;
+
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.p-tag-price {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+
+    position: absolute;
+    top: 59%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+}
+
+.h2-2-how-acess {
+    font-size: 25px;
+    font-family: "Inter", sans-serif;
+
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.time-to-consultation {
+    width: 350px;
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+
+    position: absolute;
+    top: 45%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.button-link-to-meet {
+    width: 160px;
+    height: 35px;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    color: rgba(255, 255, 255, 0.656);
+    border: none;
+    border-radius: 4px;
+
+    background-color: #09A6A3;
+
+    position: absolute;
+    top: 65%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.button-link-to-meet:hover {
+    color: white;
+    background-color: #13d8d5;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.linha-separadora-2 {
+    border-bottom: 1px solid rgb(177, 177, 177);
+    width: 535px;
+
+    position: relative;
+    top: 100%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
 /* End of Content Details */
+
+.button-archives {
+    text-decoration: none;
+    width: 160px;
+    height: 35px;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    color: rgba(255, 255, 255, 0.656);
+    border: none;
+    border-radius: 4px;
+
+    background-color: #09A6A3;
+
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.button-archives:hover {
+    color: white;
+    background-color: #13d8d5;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.button-cancel-consutation {
+    text-decoration: none;
+    width: 160px;
+    height: 35px;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    color: rgba(255, 255, 255, 0.656);
+    border: none;
+    border-radius: 4px;
+
+    background-color: #DC3545;
+
+    position: absolute;
+    top: 80%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.button-cancel-consutation:hover {
+    color: white;
+    background-color: #f63246;
+    cursor: pointer;
+    transition: 0.4s;
+}
