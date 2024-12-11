@@ -1,0 +1,450 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* End of Fonts*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-header {
+    height: 4em;
+    width: 100%;
+
+    background-color: #00CCBE;
+}
+
+/* Contents */
+
+.content-left {
+    width: 40%;
+    height: 50px;
+
+    position: relative;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.content-right {
+    width: 40%;
+    height: 50px;
+
+    position: relative;
+    top: -32%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+/* End of Contents */
+
+/* Header */
+
+.logo-header {
+    width: 60px;
+    height: 60px;
+
+    position: relative;
+    top: 50%;
+    left: 4%;
+    transform: translate(-50%, -50%);
+}
+
+a { /* Esse A aqui é o link do header*/
+    text-decoration: none;
+}
+
+.h1-name-logo {
+    font-size: 20px;
+    font-family: "Jura", sans-serif;
+    color: white;
+
+    position: absolute;
+    top: 50%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+}
+
+.h1-explorar-header {
+    font-size: 18px;
+    font-family: "Jura", sans-serif;
+    color: white;
+
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+}
+
+.content-notification {
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.notification-header-image {
+    width: 30px;
+    height: 30px;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content-manage-account {
+    width: 130px;
+    height: 30px;
+
+    position: absolute;
+    top: 50%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+}
+
+.manage_accounts_image {
+    width: 30px;
+    height: 30px;
+
+    position: relative;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.h1-perfil-header {
+    width: 95px;
+    font-size: 18px;
+    font-family: "Jura", sans-serif;
+    color: white;
+
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+/* end of Header*/
+
+/* MiniMap */
+
+.container-minimap {
+    height: 25px;
+    width: 80%;
+
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mini-map-home {
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+    color: rgb(177, 177, 177);
+
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    transform: translate(-50%, -50%);
+}
+
+.mini-map-divs {
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+    color: rgb(177, 177, 177);
+
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.mini-map-conf-prof {
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+    color: rgb(177, 177, 177);
+
+    position: absolute;
+    top: 40%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+}
+
+.linha-separadora {
+    border-bottom: 1px solid rgb(177, 177, 177);
+
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* End of MiniMap */
+
+/* Content Profile */
+
+.container-conf-profile {
+    /* border: 1px solid black; */
+
+    width: 80%;
+    height: 500px;
+
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.conf-profile {
+    font-size: 25px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-content {
+    width: 90%;
+    height: 350px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-content {
+    border: 1px solid black;
+
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    width: 100%;
+    height: 300px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-content-left {
+    width: 30%;
+    height: 300px;
+
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.cadu-photo {
+    width: 135px;
+    height: 130px;
+    
+    cursor: pointer;
+
+    border-radius: 100%;
+
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.name-of-user {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+
+    position: relative;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.age-of-user {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+
+    position: relative;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.separator-lines {
+    border-right: 1px solid #ababab;
+
+    width: 0px;
+    height: 80%;
+
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.p-input-yourname {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+
+    position: absolute;
+    top: 20%;
+    left: 35.5%;
+    transform: translate(-50%, -50%);
+}
+
+.placeholder-name {
+    width: 250px;
+    height: 27px;
+
+    border: 1px solid black;
+    border-radius: 4px;
+    padding-left: 6px;
+    font-size: 15px;
+
+
+    position: absolute;
+    top: 30%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+}
+
+.p-input-lastname {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+
+    position: absolute;
+    top: 45%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+}
+
+.placeholder-lastname {
+    width: 250px;
+    height: 27px;
+
+    border: 1px solid black;
+    border-radius: 4px;
+    padding-left: 6px;
+    font-size: 15px;
+
+
+    position: absolute;
+    top: 55%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+}
+
+.p-input-cellphone {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+
+    position: absolute;
+    top: 70%;
+    left: 36.5%;
+    transform: translate(-50%, -50%);
+}
+
+.input-cellphone {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    width: 250px;
+    height: 27px;
+
+    border-radius: 4px;
+    padding-left: 6px;
+    font-size: 14px;
+
+    position: absolute;
+    top: 80%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+}
+
+.p-input-birthday {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+
+    position: absolute;
+    top: 45%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.input-date {
+    width: 250px;
+    height: 27px;
+
+    border: 1px solid black;
+    border-radius: 4px;
+    padding-left: 6px;
+    font-size: 15px;
+
+    position: absolute;
+    top: 55%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.button-cancel-changes {
+    width: 130px;
+    height: 30px;
+    font-size: 17px;
+    color: white;
+    background-color: #EB0F0F;
+    border: none;
+    border-radius: 4px;
+
+
+    position: absolute;
+    top: 7%;
+    left: 73%;
+    transform: translate(-50%, -50%);
+}
+
+.button-cancel-changes:hover {
+    background-color: #c21717;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.button-saves-changes {
+    width: 170px;
+    height: 30px;
+    font-size: 17px;
+    color: white;
+    background-color: #24DB00;
+    border: none;
+    border-radius: 4px;
+
+
+    position: absolute;
+    top: 7%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+}
+
+.button-saves-changes:hover {
+    background-color: #2cb510;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+/* End of Content Profile */
