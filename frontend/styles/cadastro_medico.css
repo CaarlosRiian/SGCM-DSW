@@ -1,0 +1,183 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* End of Fonts*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-header {
+    height: 4em;
+    width: 100%;
+
+    background-color: #00CCBE;
+}
+
+/* Contents */
+
+.content-left {
+    width: 40%;
+    height: 50px;
+
+    position: relative;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.content-right {
+    width: 40%;
+    height: 50px;
+
+    position: relative;
+    top: -32%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+/* End of Contents */
+
+/* Header */
+
+.logo-header {
+    width: 60px;
+    height: 60px;
+
+    position: relative;
+    top: 50%;
+    left: 4%;
+    transform: translate(-50%, -50%);
+}
+
+a { /* Esse A aqui é o link do header*/
+    text-decoration: none;
+}
+
+.h1-name-logo {
+    font-size: 20px;
+    font-family: "Jura", sans-serif;
+    color: white;
+
+    position: absolute;
+    top: 50%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+}
+
+.h1-explorar-header {
+    font-size: 18px;
+    font-family: "Jura", sans-serif;
+    color: white;
+
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+}
+
+.content-notification {
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.notification-header-image {
+    width: 30px;
+    height: 30px;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content-manage-account {
+    width: 130px;
+    height: 30px;
+
+    position: absolute;
+    top: 50%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+}
+
+.manage_accounts_image {
+    width: 30px;
+    height: 30px;
+
+    position: relative;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.h1-perfil-header {
+    width: 95px;
+    font-size: 18px;
+    font-family: "Jura", sans-serif;
+    color: white;
+
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+/* end of Header*/
+
+/* MiniMap */
+
+.container-minimap {
+    height: 25px;
+    width: 80%;
+
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mini-map-home {
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+    color: rgb(177, 177, 177);
+
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    transform: translate(-50%, -50%);
+}
+
+.linha-separadora {
+    border-bottom: 1px solid rgb(177, 177, 177);
+
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* End of MiniMap */
+
+/* Content Register */
+
+.container-register {
+    width: 80%;
+    height: 550px;
+
+    border: 1px solid black;
+
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* End of Content Register */

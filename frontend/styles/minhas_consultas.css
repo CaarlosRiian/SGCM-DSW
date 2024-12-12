@@ -1,0 +1,477 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* End of Fonts*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-header {
+    height: 4em;
+    width: 100%;
+
+    background-color: #00CCBE;
+}
+
+/* Contents */
+
+.content-left {
+    width: 40%;
+    height: 50px;
+
+    position: relative;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.content-right {
+    width: 40%;
+    height: 50px;
+
+    position: relative;
+    top: -32%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+/* End of Contents */
+
+/* Header */
+
+.logo-header {
+    width: 60px;
+    height: 60px;
+
+    position: relative;
+    top: 50%;
+    left: 4%;
+    transform: translate(-50%, -50%);
+}
+
+a { /* Esse A aqui é o link do header*/
+    text-decoration: none;
+}
+
+.h1-name-logo {
+    font-size: 20px;
+    font-family: "Jura", sans-serif;
+    color: white;
+
+    position: absolute;
+    top: 50%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+}
+
+.h1-explorar-header {
+    font-size: 18px;
+    font-family: "Jura", sans-serif;
+    color: white;
+
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+}
+
+.content-notification {
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.notification-header-image {
+    width: 30px;
+    height: 30px;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content-manage-account {
+    width: 130px;
+    height: 30px;
+
+    position: absolute;
+    top: 50%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+}
+
+.manage_accounts_image {
+    width: 30px;
+    height: 30px;
+
+    position: relative;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.h1-perfil-header {
+    width: 95px;
+    font-size: 18px;
+    font-family: "Jura", sans-serif;
+    color: white;
+
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+/* end of Header*/
+
+/* MiniMap */
+
+.container-minimap {
+    height: 25px;
+    width: 80%;
+
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mini-map-home {
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+    color: rgb(177, 177, 177);
+
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    transform: translate(-50%, -50%);
+}
+
+.mini-map-divs {
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+    color: rgb(177, 177, 177);
+
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.mini-map-my-queries {
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+    color: rgb(177, 177, 177);
+
+    position: absolute;
+    top: 40%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+}
+
+.linha-separadora {
+    border-bottom: 1px solid rgb(177, 177, 177);
+
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* End of MiniMap */
+
+/* My Queries */
+
+.container-my-queries {
+    width: 80%;
+    height: 550px;
+
+    /* border: 1px solid black; */
+
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content-my-queries {
+    width: 100%;
+    height: 50px;
+
+    /* border: 1px solid black; */
+
+    position: absolute;
+    top: 4.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.h1-my-queries {
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.card-about {
+    width: 20%;
+    height: 50px;
+
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 4px;
+
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+}
+
+.ball-active {
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+
+    background-color: #008000;
+
+    position: absolute;
+    top: 50%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+}
+
+.p-active {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+}
+
+.ball-cancel {
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+
+    background-color: #FF0000;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.p-cancel {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+
+    position: absolute;
+    top: 50%;
+    left: 76%;
+    transform: translate(-50%, -50%);
+}
+
+/* Cards */
+
+.card-1 {
+    border: 1px solid rgb(177, 177, 177);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    width: 350px;
+    height: 190px;
+
+    position: absolute;
+    top: 30%;
+    left: 16.5%;
+    transform: translate(-50%, -50%);
+}
+
+.photo-doctor {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 100%;
+
+    position: absolute;
+    top: 17%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.name-of-doctor {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+
+    position: absolute;
+    top: 12%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.p-status-consultation {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: rgb(116, 116, 116);
+
+    position: absolute;
+    top: 9%;
+    left: 83%;
+    transform: translate(-50%, -50%);
+}
+
+.color-ball {
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    background-color: #008000;
+
+    position: absolute;
+    top: 10%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+}
+
+.span-date-and-time {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+
+    position: absolute;
+    top: 45%;
+    left: 19%;
+    transform: translate(-50%, -50%);
+}
+
+.p-date-and-time {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+
+    width: 60%;
+
+    position: absolute;
+    top: 45%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+}
+
+.span-location {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.p-location {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+
+    width: 60%;
+
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.button-show-details {
+    width: 130px;
+    height: 25px;
+    padding-top: 7px;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+
+    text-align: center;
+
+    background-color: #0056B3;
+    border-radius: 4px;
+
+    position: absolute;
+    top: 85%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.button-show-details:hover {
+    background-color: #0d4785;
+    transition: 0.4s; 
+}
+
+.button-cancel-consultation {
+    width: 160px;
+    height: 25px;
+    padding-top: 7px;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+
+    text-align: center;
+
+    background-color: #DC3545;
+    border-radius: 4px;
+
+    position: absolute;
+    top: 85%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.button-cancel-consultation:hover {
+    background-color: #a82b38;
+    transition: 0.4s; 
+}
+
+.card-2 {
+    border: 1px solid rgb(177, 177, 177);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    width: 350px;
+    height: 190px;
+
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-3 {
+    border: 1px solid rgb(177, 177, 177);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    width: 350px;
+    height: 190px;
+
+    position: absolute;
+    top: 30%;
+    left: 83.5%;
+    transform: translate(-50%, -50%);
+}
+
+/* End of Cards */
+
+/* End of My Queries */
