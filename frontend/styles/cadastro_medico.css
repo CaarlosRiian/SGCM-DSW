@@ -172,12 +172,323 @@ a { /* Esse A aqui é o link do header*/
     width: 80%;
     height: 550px;
 
-    border: 1px solid black;
+    /* border: 1px solid black; */
+
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.h1-register-doctor {
+    font-size: 25px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-register {
+    width: 100%;
+    height: 100%;
 
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.span-crm {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+
+}
+
+.crm-input {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 30%;
+    padding-left: 10px;
+
+    border-radius: 4px;
+    border: 1px solid rgb(177, 177, 177);
+
+    position: absolute;
+    top: 11%;
+    left: 33.5%;
+    transform: translate(-50%, -50%);
+}
+
+.span-cdim {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+
+    position: absolute;
+    top: 5%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+.crm-input-file {
+    display: none;
+}
+
+.crm-input-file-label {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 24.5%;
+    padding-left: 10px;
+    line-height: 30px;
+    text-align: center;
+
+    color: #000; 
+    background-color: #fff; 
+    border-radius: 4px;
+    border: 1px solid rgb(177, 177, 177);
+
+    position: absolute;
+    top: 11%;
+    left: 66.5%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.crm-input-file-label:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.span-complete-name {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+
+    position: absolute;
+    top: 20%;
+    left: 24.5%;
+    transform: translate(-50%, -50%);
+}
+
+.input-complete-name {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 30%;
+    padding-left: 10px;
+
+    border-radius: 4px;
+    border: 1px solid rgb(177, 177, 177);
+
+    position: absolute;
+    top: 26%;
+    left: 33.5%;
+    transform: translate(-50%, -50%);
+}
+
+.span-cep {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+
+    position: absolute;
+    top: 20%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+}
+
+.input-cep {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 24%;
+    padding-left: 10px;
+
+    border-radius: 4px;
+    border: 1px solid rgb(177, 177, 177);
+
+    position: absolute;
+    top: 26%;
+    left: 66.5%;
+    transform: translate(-50%, -50%);
+}
+
+.span-address {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+
+    position: absolute;
+    top: 35%;
+    left: 19.6%;
+    transform: translate(-50%, -50%);
+}
+
+.input-address {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 60%;
+    padding-left: 10px;
+
+    border-radius: 4px;
+    border: 1px solid rgb(177, 177, 177);
+
+    position: absolute;
+    top: 41%;
+    left: 48.5%;
+    transform: translate(-50%, -50%);
+}
+
+.span-neighborhood {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.input-neighborhood {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 30%;
+    padding-left: 10px;
+
+    border-radius: 4px;
+    border: 1px solid rgb(177, 177, 177);
+
+    position: absolute;
+    top: 53%;
+    left: 18%;
+}
+
+.span-number {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+
+    position: absolute;
+    top: 50%;
+    left: 57.5%;
+    transform: translate(-50%, -50%);
+}
+
+.input-number {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 24%;
+    padding-left: 10px;
+
+    border-radius: 4px;
+    border: 1px solid rgb(177, 177, 177);
+
+    position: absolute;
+    top: 56%;
+    left: 66.5%;
+    transform: translate(-50%, -50%);
+}
+
+.span-rg {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+
+    position: absolute;
+    top: 65%;
+    left: 19.2%;
+    transform: translate(-50%, -50%);
+}
+
+.input-rg {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 60%;
+    padding-left: 10px;
+
+    border-radius: 4px;
+    border: 1px solid rgb(177, 177, 177);
+
+    position: absolute;
+    top: 71%;
+    left: 48.5%;
+    transform: translate(-50%, -50%);
+}
+
+.span-profile-pic {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+
+    position: absolute;
+    top: 80%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+}
+
+.profile-pic-input-file {
+    display: none;
+}
+
+.profile-pic-input-file-label {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 60%;
+    padding-left: 10px;
+    line-height: 30px;
+    text-align: center;
+
+    color: #000; 
+    background-color: #fff; 
+    border-radius: 4px;
+    border: 1px solid rgb(177, 177, 177);
+
+    position: absolute;
+    top: 86%;
+    left: 48.5%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.profile-pic-input-file-label:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.button-register-doctor {
+    width: 150px;
+    height: 35px;
+    color: white;
+    background-color: #09A6A3;
+    border: none;
+    border-radius: 4px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+
+    position: absolute;
+    top: 95%;
+    left: 25.5%;
+    transform: translate(-50%, -50%);
+}
+
+.button-register-doctor:hover {
+    background-color: #147e7c;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
 /* End of Content Register */
