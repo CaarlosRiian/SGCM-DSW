@@ -12,17 +12,14 @@
 .container-header {
     height: 4em;
     width: 100%;
-
     background-color: #00CCBE;
+    position: relative;
 }
-
-/* Contents */
 
 .content-left {
     width: 40%;
     height: 50px;
-
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 30%;
     transform: translate(-50%, -50%);
@@ -31,28 +28,22 @@
 .content-right {
     width: 40%;
     height: 50px;
-
-    position: relative;
-    top: -32%;
+    position: absolute;
+    top: 50%;
     left: 70%;
     transform: translate(-50%, -50%);
 }
 
-/* End of Contents */
-
-/* Header */
-
 .logo-header {
     width: 60px;
     height: 60px;
-
     position: relative;
     top: 50%;
     left: 4%;
     transform: translate(-50%, -50%);
 }
 
-a { /* Esse A aqui é o link do header*/
+a {  
     text-decoration: none;
 }
 
@@ -60,10 +51,9 @@ a { /* Esse A aqui é o link do header*/
     font-size: 20px;
     font-family: "Jura", sans-serif;
     color: white;
-
     position: absolute;
     top: 50%;
-    left: 22%;
+    left: 24%;
     transform: translate(-50%, -50%);
 }
 
@@ -71,17 +61,16 @@ a { /* Esse A aqui é o link do header*/
     font-size: 18px;
     font-family: "Jura", sans-serif;
     color: white;
-
     position: absolute;
     top: 50%;
-    left: 47%;
+    left: 49%;
     transform: translate(-50%, -50%);
 }
 
+/* Notification Icon */
 .content-notification {
     width: 30px;
     height: 30px;
-
     position: absolute;
     top: 50%;
     left: 70%;
@@ -91,17 +80,16 @@ a { /* Esse A aqui é o link do header*/
 .notification-header-image {
     width: 30px;
     height: 30px;
-
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
+/* Manage Account */
 .content-manage-account {
     width: 130px;
     height: 30px;
-
     position: absolute;
     top: 50%;
     left: 88%;
@@ -111,7 +99,6 @@ a { /* Esse A aqui é o link do header*/
 .manage_accounts_image {
     width: 30px;
     height: 30px;
-
     position: relative;
     top: 50%;
     left: 15%;
@@ -123,14 +110,194 @@ a { /* Esse A aqui é o link do header*/
     font-size: 18px;
     font-family: "Jura", sans-serif;
     color: white;
-
     position: absolute;
     top: 50%;
     left: 65%;
     transform: translate(-50%, -50%);
 }
 
-/* end of Header*/
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-header {
+        height: auto;
+    }
+
+    .content-left, .content-right {
+        width: 100%;
+        height: auto;
+        position: static;
+        transform: none;
+        text-align: center;
+    }
+
+    .logo-header {
+        margin: 0 auto;
+    }
+
+    .h1-name-logo, .h1-explorar-header {
+        position: static;
+        transform: none;
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    .content-notification, .content-manage-account {
+        position: static;
+        transform: none;
+        margin: 10px auto;
+    }
+
+    .notification-header-image, .manage_accounts_image {
+        margin: 0 auto;
+    }
+
+    .h1-perfil-header {
+        position: static;
+        transform: none;
+        font-size: 16px;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .h1-name-logo, .h1-explorar-header, .h1-perfil-header {
+        font-size: 14px;
+    }
+
+    .logo-header {
+        width: 50px;
+        height: 50px;
+    }
+
+    .notification-header-image, .manage_accounts_image {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Modal Meu Perfil */
+.modal {
+    display: none; 
+    position: relative;
+    top: -30px; 
+    left: 750px; 
+    width: 180px; 
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1000; 
+    padding: 10px;
+}
+
+/* Modal content */
+.modal-content {
+    text-align: center;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 0px;
+    left: 180px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Modal links */
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.modal-content ul li {
+    margin: 10px 0;
+}
+
+.modal-content ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: color 0.3s;
+}
+
+.modal-content ul li a:hover {
+    color: rgb(87, 87, 87)
+}
+
+/* Logout button */
+#logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+#logout-btn > a {
+    color: white;
+}
+
+#logout-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Fim do modal meu perfil */
+
+/* Modal de Notificações */
+#notifications-modal {
+    display: none; 
+    position: absolute;
+    top: -30px; 
+    left: 540px; 
+    width: 300px;
+    z-index: 1000;
+}
+
+#notifications-modal .modal-content {
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#notifications-modal h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+#notifications-modal ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#notifications-modal ul li {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.close-btn-notification-modal {
+    position: relative;
+    top: -22px;
+    left: 280px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Fim do modal minhas notificações */
 
 /* MiniMap */
 

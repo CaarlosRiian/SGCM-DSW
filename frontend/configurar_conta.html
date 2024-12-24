@@ -18,10 +18,10 @@
             </a>
         </div>
         <div class="content-right">
-            <a href="#" class="content-notification">
+            <a href="#" class="content-notification" id="notifications-btn">
                 <img src="images/icons_images/notifications_icon.png" alt="icon notification" class="notification-header-image">
             </a>
-            <a href="#" class="content-manage-account">
+            <a href="#" class="content-manage-account" id="profile-btn">
                 <img src="images/icons_images/manage_accounts_icon.png" alt="manage accounts icon" class="manage_accounts_image">
                 <h1 class="h1-perfil-header">Meu Perfil</h1>
             </a>
@@ -52,5 +52,37 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal Meu Perfil -->
+    <div class="modal" id="profile-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+
+            <ul>
+                <li><a href="configurar_perfil.html">Configurar Perfil</a></li>
+                <li><a href="configurar_conta.html">Configurar Conta</a></li>
+                <li><a href="minha_consulta.html">Minhas Consultas</a></li>
+            </ul>
+            <button id="logout-btn"><a href="login.html">Sair</a></button>
+        </div>
+    </div>
+    <!-- Fim do Modal Meu Perfil -->
+
+     <!-- Modal de Notificações -->
+    <div class="modal" id="notifications-modal">
+        <h3>Notificações</h3>
+        <span class="close-btn-notification-modal" id="close-notifications-modal">&times;</span>
+        <div class="modal-content">
+            <ul id="notifications-list">
+                <li>Você tem uma nova consulta marcada.</li>
+                <li>Atualize suas informações de perfil.</li>
+                <li>Receita médica disponível para download.</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Fim do Modal de notificações -->
+
+    <script src="js/configurar_conta/c_c_modals.js"></script>
+    <script src="js/configurar_conta/c_c_notifications_modal.js"></script>
 </body>
 </html>
