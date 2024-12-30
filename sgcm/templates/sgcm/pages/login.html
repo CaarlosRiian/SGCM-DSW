@@ -16,16 +16,16 @@
                 <form action="post">
                     {% csrf_token %}
                     <p class="p1-form-email">E-mail</p>
-                    <input type="email" placeholder="email@email.com" class="input-user">
-                    <p class="p2-form-pass">Senha</p>
-                    <input type="password" placeholder="Digite sua senha" class="input-pass">
+                    <input type="email" placeholder="email@email.com" class="input-email-login">
+                    <p class="p2-form-pass-login">Senha</p>
+                    <input type="password" placeholder="Digite sua senha" class="input-pass-login">
                 </form>
             </div>
-            <div id="container-3">
+            <div id="container-3-login">
                 <a href="home.html">
                     <input type="submit" value="Logar"     class="button-register">
                 </a>
-                <p class="p-other-option">Não possui uma conta? <a   href="cadastro.html">Cadastre-se</a></p>
+                <p class="p-other-option">Não possui uma conta? <a href="{% url 'register' %}">Cadastre-se</a></p>
             </div>
         </div> 
     </div>
