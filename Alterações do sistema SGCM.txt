@@ -1,0 +1,7 @@
+Alterações no sistema:
+
+tirar tela de configurar conta -> e-mail
+
+transferir alterar senha para configurar perfil.
+
+ 

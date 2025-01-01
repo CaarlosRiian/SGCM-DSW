@@ -1,0 +1,35 @@
+{% extends 'global/base.html' %}
+{% load static %}
+
+{% block title %}Cadastrar-se{% endblock %} 
+
+{% block content %}
+    <div class="container-content-register">
+        <div class="content-register">
+            <div id="container-1">
+                <img src="{% static 'sgcm/images/login/logo-image.png' %}"  alt="image-logo" class="image-logo">
+                <h1 class="h1-principal">ConsultaFácil</h1>
+            </div>
+            <h1 id="linha-separadora"></h1>
+            <h2 class="h2-cadastrar">Cadastre-se</h2>
+            <div id="container-2">
+                <form action="{% url 'register' %}" method="POST">
+                    {% csrf_token %}
+                    <p class="p1-form-name">Nome de completo</p>
+                    <input type="text" placeholder="Nome completo" class="input-user" name="username">
+                    <p class="p2-form-email">E-mail</p>
+                    <input type="email" placeholder="email@email.com"   class="input-email" name="email">
+                    <p class="p3-form-pass">Senha</p>
+                    <input type="password" placeholder="Digite sua senha"   class="input-pass" name="senha">
+                    <p class="p4-form-cpass">Confirmar Senha</p>
+                    <input type="password" placeholder="Digite sua senha"   class="input-c-pass" name="confirm_passw">
+                    <input type="submit" value="Cadastrar"   class="button-register">
+                </form>
+            </div>
+                <p class="p-other-option">Caso já possua uma conta, <a      href="{% url 'login' %}">Logar-se</a></p>
+        </div>  
+    </div>
+    <div class="container-images">
+        <img src="{% static 'sgcm/images/login/pessoas-saude.png' %}" alt="imagem de pessoas da area de saúde" class="profissionais-saude">
+    </div>
+{% endblock%}
