@@ -1,0 +1,16 @@
+{% extends 'global/base.html' %}
+{% load static %}
+
+{% block title %}Logar-se{% endblock title %}
+
+{% block content %}
+
+    <form action="." method="POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        
+        <button type="submit">Logar</button>
+    </form>
+
+{% endblock content %}

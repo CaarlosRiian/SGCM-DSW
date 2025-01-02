@@ -1,0 +1,2150 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* End of Fonts*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-header {
+    height: 4em;
+    width: 100%;
+    background-color: #00CCBE;
+    position: relative;
+}
+
+.content-left {
+    width: 40%;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.content-right {
+    width: 40%;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-header {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 50%;
+    left: 4%;
+    transform: translate(-50%, -50%);
+}
+
+a {  
+    text-decoration: none;
+}
+
+.h1-name-logo {
+    font-size: 20px;
+    font-family: "Jura", sans-serif;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+}
+
+.h1-explorar-header {
+    font-size: 18px;
+    font-family: "Jura", sans-serif;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+}
+
+/* Notification Icon */
+.content-notification {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.notification-header-image {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Manage Account */
+.content-manage-account {
+    width: 130px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+}
+
+.manage_accounts_image {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.h1-perfil-header {
+    width: 95px;
+    font-size: 18px;
+    font-family: "Jura", sans-serif;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-header {
+        height: auto;
+    }
+
+    .content-left, .content-right {
+        width: 100%;
+        height: auto;
+        position: static;
+        transform: none;
+        text-align: center;
+    }
+
+    .logo-header {
+        margin: 0 auto;
+    }
+
+    .h1-name-logo, .h1-explorar-header {
+        position: static;
+        transform: none;
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    .content-notification, .content-manage-account {
+        position: static;
+        transform: none;
+        margin: 10px auto;
+    }
+
+    .notification-header-image, .manage_accounts_image {
+        margin: 0 auto;
+    }
+
+    .h1-perfil-header {
+        position: static;
+        transform: none;
+        font-size: 16px;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .h1-name-logo, .h1-explorar-header, .h1-perfil-header {
+        font-size: 14px;
+    }
+
+    .logo-header {
+        width: 50px;
+        height: 50px;
+    }
+
+    .notification-header-image, .manage_accounts_image {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Modal Meu Perfil */
+.modal {
+    display: none; 
+    position: relative;
+    top: -30px; 
+    left: 750px; 
+    width: 180px; 
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1000; 
+    padding: 10px;
+}
+
+/* Modal content */
+.modal-content {
+    text-align: center;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 0px;
+    left: 180px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Modal links */
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.modal-content ul li {
+    margin: 10px 0;
+}
+
+.modal-content ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: color 0.3s;
+}
+
+.modal-content ul li a:hover {
+    color: rgb(87, 87, 87)
+}
+
+/* Logout button */
+#logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+#logout-btn > a {
+    color: white;
+}
+
+#logout-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Fim do modal meu perfil */
+
+/* Modal de Notificações */
+#notifications-modal {
+    display: none; 
+    position: absolute;
+    top: -30px; 
+    left: 540px; 
+    width: 300px;
+    z-index: 1000;
+}
+
+#notifications-modal .modal-content {
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#notifications-modal h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+#notifications-modal ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#notifications-modal ul li {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.close-btn-notification-modal {
+    position: relative;
+    top: -22px;
+    left: 280px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Fim do modal minhas notificações */
+
+/* Mini-map */
+
+.container-minimap {
+    height: 25px;
+    width: 80%;
+
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mini-map-home {
+    font-size: 0.8rem; 
+    font-family: "Inter", sans-serif;
+    color: rgb(177, 177, 177);
+
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    transform: translate(-50%, -50%);
+}
+
+.linha-separadora {
+    border-bottom: 1px solid rgb(177, 177, 177);
+
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+    .container-minimap {
+        width: 90%; 
+        top: 15%; 
+    }
+
+    .mini-map-home {
+        font-size: 0.9rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .container-minimap {
+        width: 95%; 
+        top: 20%; 
+    }
+
+    .mini-map-home {
+        font-size: 0.8rem; 
+    }
+
+    .linha-separadora {
+        top: 110%; 
+    }
+}
+
+/* End of Mini-map */
+
+/* Search Content */
+
+.container-search {
+    width: 80%;
+    height: 190px;
+
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.greeting {
+    width: 50%;
+    height: 30px;
+
+    position: absolute;
+    top: 9%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+}
+
+.greeting-h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+}
+
+.name-of-user {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    color: #09A6A3;
+}
+
+/* End of Search Content */
+
+/* Search Bar */
+
+.search-bar {
+    height: 30px;
+    width: 70%;
+
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.input-search {
+    height: 25px;
+    width: 98%;
+    padding-left: 10px;
+    border: 1px solid rgb(46, 46, 46);
+    border-radius: 4px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input-search::placeholder {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+} 
+
+
+@media (max-width: 768px) {
+    .container-search {
+        width: 90%; 
+        top: 35%; 
+    }
+
+    .greeting {
+        width: 100%; 
+        left: 50%; 
+        top: 15%; 
+    }
+
+    .greeting-h2 {
+        font-size: 18px; 
+        left: 50%;
+    }
+
+    .search-bar {
+        width: 80%; 
+        top: 45%; 
+        left: 50%; 
+    }
+
+    .input-search {
+        width: 100%; 
+        font-size: 12px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .container-search {
+        width: 95%; 
+        top: 40%; 
+    }
+
+    .greeting-h2 {
+        font-size: 16px; 
+    }
+
+    .search-bar {
+        width: 90%; 
+    }
+
+    .input-search {
+        font-size: 11px;
+        padding-left: 8px; 
+    }
+}
+
+/* End Search Bar */
+
+/* Search Content */
+
+.container-search {
+    width: 80%;
+    height: 190px;
+
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.greeting {
+    width: 50%;
+    height: 30px;
+
+    position: absolute;
+    top: 9%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+}
+
+.greeting-h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+}
+
+.name-of-user {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    color: #09A6A3;
+}
+
+/* End of Search Content */
+
+/* Search Bar */
+
+.search-bar {
+    height: 30px;
+    width: 70%;
+
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.input-search {
+    height: 25px;
+    width: 98%;
+    padding-left: 10px;
+    border: 1px solid rgb(46, 46, 46);
+    border-radius: 4px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input-search::placeholder {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+} 
+
+/* End Search Bar */
+
+/* Icons Search */
+
+.container-icons-search {
+    width: 70%;
+    height: 100px;
+
+    border: 1px solid red;
+
+    position: relative;
+    top: 65%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-psicologo-search {
+    width: 110px;
+    height: 24px;
+    border-radius: 6px;
+    background-color: #dfdfdf;
+
+    position: absolute;
+    top: 16%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+}
+
+.image-icon-psicologo {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.p-name-icon-search-psicologo {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #999999;
+
+    position: absolute;
+    top: 45%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-dermatologista-search {
+    width: 150px;
+    height: 24px;
+    border-radius: 6px;
+    background-color: #dfdfdf;
+
+    position: absolute;
+    top: 16%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+}
+
+.image-icon-dermatologista {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    top: 45%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+}
+
+.p-name-icon-search-dermatologista {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #999999;
+
+    position: absolute;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-oftamologista-search {
+    width: 130px;
+    height: 24px;
+    border-radius: 6px;
+    background-color: #dfdfdf;
+
+    position: absolute;
+    top: 16%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+}
+
+.image-icon-oftamologista {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 201%;
+    transform: translate(-50%, -50%);
+}
+
+.p-name-icon-search-oftamologista {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #999999;
+
+    position: absolute;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+}
+
+/* Repetindo */
+
+.icon-psicologo-search-2 {
+    width: 110px;
+    height: 24px;
+    border-radius: 6px;
+    background-color: #dfdfdf;
+
+    position: absolute;
+    top: 16%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+.image-icon-psicologo-2 {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.p-name-icon-search-psicologo-2 {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #999999;
+
+    position: absolute;
+    top: 45%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-dermatologista-search-2 {
+    width: 150px;
+    height: 24px;
+    border-radius: 6px;
+    background-color: #dfdfdf;
+
+    position: absolute;
+    top: 16%;
+    left: 86%;
+    transform: translate(-50%, -50%);
+}
+
+.image-icon-dermatologista-2 {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    top: 45%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+}
+
+.p-name-icon-search-dermatologista-2 {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #999999;
+
+    position: absolute;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+}
+
+/* Segunda Linha */
+
+.icon-dermatologista-search-3 {
+    width: 150px;
+    height: 24px;
+    border-radius: 6px;
+    background-color: #dfdfdf;
+
+    position: absolute;
+    top: 48%;
+    left: 10.2%;
+    transform: translate(-50%, -50%);
+}
+
+.image-icon-dermatologista-3 {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    top: 45%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+}
+
+.p-name-icon-search-dermatologista-3 {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #999999;
+
+    position: absolute;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-oftamologista-search-2 {
+    width: 130px;
+    height: 24px;
+    border-radius: 6px;
+    background-color: #dfdfdf;
+
+    position: absolute;
+    top: 48%;
+    left: 31%;
+    transform: translate(-50%, -50%);
+}
+
+.image-icon-oftamologista-2 {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+}
+
+.p-name-icon-search-oftamologista-2 {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #999999;
+
+    position: absolute;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-dermatologista-search-4 {
+    width: 150px;
+    height: 24px;
+    border-radius: 6px;
+    background-color: #dfdfdf;
+
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-icon-dermatologista-4 {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    top: 45%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+}
+
+.p-name-icon-search-dermatologista-4 {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #999999;
+
+    position: absolute;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+} 
+
+.icon-oftamologista-search-3 {
+    width: 130px;
+    height: 24px;
+    border-radius: 6px;
+    background-color: #dfdfdf;
+
+    position: absolute;
+    top: 48%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.image-icon-oftamologista-3 {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+}
+
+.p-name-icon-search-oftamologista-3 {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #999999;
+
+    position: absolute;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-psicologo-search-3 {
+    width: 110px;
+    height: 24px;
+    border-radius: 6px;
+    background-color: #dfdfdf;
+
+    position: absolute;
+    top: 48%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+}
+
+.image-icon-psicologo-3 {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.p-name-icon-search-psicologo-3 {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #999999;
+
+    position: absolute;
+    top: 45%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+/* Terceira Linha */
+
+.icon-dermatologista-search-5 {
+    width: 150px;
+    height: 24px;
+    border-radius: 6px;
+    background-color: #dfdfdf;
+
+    position: absolute;
+    top: 80%;
+    left: 10.2%;
+    transform: translate(-50%, -50%);
+}
+
+.image-icon-dermatologista-5 {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    top: 45%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+}
+
+.p-name-icon-search-dermatologista-5 {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #999999;
+
+    position: absolute;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-psicologo-search-4 {
+    width: 110px;
+    height: 24px;
+    border-radius: 6px;
+    background-color: #dfdfdf;
+
+    position: absolute;
+    top: 80%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+}
+
+.image-icon-psicologo-4 {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.p-name-icon-search-psicologo-4 {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #999999;
+
+    position: absolute;
+    top: 45%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.linha-separadora-2 {
+    border-bottom: 1px solid rgb(0, 0, 0);
+    width: 70%;
+
+    position: relative;
+    top: 47%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+/* End of Icons Search */
+
+/* Timetable card */
+
+.container-timetable {
+    width: 80%;
+    height: 400px;
+    
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title-timetable {
+    width: 50%;
+    height: 35px;
+}
+
+.h1-title-timetable {
+    font-size: 23px ;
+    font-family: "Jura", sans-serif;
+
+    position: relative;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content-timetable {
+    width: 100%;
+    height: 85% ;
+
+    position: relative;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Cards Linha 1 */
+
+.card-timetable-1 {
+    border: 1px solid rgb(198, 198, 198);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.2);
+    
+    width: 340px;
+    height: 200px;
+    border-radius: 6px;
+
+    position: relative;
+    top: 33%;
+    left: 16%;
+    transform: translate(-50%, -50%);
+}
+
+.image-dra-ana {
+    width: 70px;
+    height: 70px;
+    border-radius: 80px;
+    border: 1px solid black;
+
+    position: relative;
+    top: 22%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+}
+
+.h2-card-timetable {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    width: 70%;
+
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.image-icon-verified {
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    top: 10%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+}
+
+.p-card-timetable {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    width: 210px;
+    height: 30px;
+
+    position: absolute;
+    top: 24%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+}
+
+.stars-rate {
+    width: 130px;
+    height: 20px;
+
+    position: absolute;
+    top: 38%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-1 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-2 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-3 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 34%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-4 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-5 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+}
+
+.map-icon {
+    width: 28px;
+    height: 24px;
+
+    position: absolute;
+    top: 52%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+}
+
+.p-location {
+    width: 80%;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+
+
+    position: absolute;
+    top: 52%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.calendar-icon {
+    width: 28px;
+    height: 24px;
+
+    position: absolute;
+    top: 68%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+}
+
+.p-next-date {
+    width: 80%;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+
+
+    position: absolute;
+    top: 68%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.button-ver-horarios {
+    background-color: #09A6A3;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    padding-top: 3px;
+    text-align: center;
+    height: 23px;
+    width: 120px;
+
+    position: absolute;
+    top: 85%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+}
+
+.button-ver-horarios:hover {
+    background-color: #0d817f;
+    border-radius: 4px;
+    transition: 0.4s;
+  
+}
+
+.card-timetable-2 {
+    border: 1px solid rgb(198, 198, 198);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.2);
+    
+    width: 340px;
+    height: 200px;
+    border-radius: 6px;
+
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-dra-ana-2 {
+    width: 70px;
+    height: 70px;
+    border-radius: 80px;
+    border: 1px solid black;
+
+    position: relative;
+    top: 22%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+}
+
+.h2-card-timetable-2 {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    width: 70%;
+
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.image-icon-verified-2 {
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    top: 10%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+}
+
+.p-card-timetable-2 {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    width: 210px;
+    height: 30px;
+
+    position: absolute;
+    top: 24%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+}
+
+.stars-rate-2 {
+    width: 130px;
+    height: 20px;
+
+    position: absolute;
+    top: 38%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-1 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-2 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-3 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 34%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-4 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-5 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+}
+
+.map-icon-2 {
+    width: 28px;
+    height: 24px;
+
+    position: absolute;
+    top: 52%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+}
+
+.p-location-2 {
+    width: 80%;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+
+
+    position: absolute;
+    top: 52%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.calendar-icon-2 {
+    width: 28px;
+    height: 24px;
+
+    position: absolute;
+    top: 68%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+}
+
+.p-next-date-2 {
+    width: 80%;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+
+
+    position: absolute;
+    top: 68%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.button-ver-horarios-2 {
+    background-color: #09A6A3;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    padding-top: 3px;
+    text-align: center;
+    height: 23px;
+    width: 120px;
+
+    position: absolute;
+    top: 85%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+}
+
+.button-ver-horarios-2:hover {
+    background-color: #0d817f;
+    border-radius: 4px;
+    transition: 0.4s;
+  
+}
+
+.card-timetable-3 {
+    border: 1px solid rgb(198, 198, 198);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.2);
+    
+    width: 340px;
+    height: 200px;
+    border-radius: 6px;
+
+    position: absolute;
+    top: 33%;
+    left: 84%;
+    transform: translate(-50%, -50%);
+}
+
+.image-dra-ana-3 {
+    width: 70px;
+    height: 70px;
+    border-radius: 80px;
+    border: 1px solid black;
+
+    position: relative;
+    top: 22%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+}
+
+.h2-card-timetable-3 {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    width: 70%;
+
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.image-icon-verified-3 {
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    top: 10%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+}
+
+.p-card-timetable-3 {
+    /* border: 1px solid black; */
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    width: 210px;
+    height: 30px;
+
+    position: absolute;
+    top: 24%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+}
+
+.stars-rate-3 {
+    width: 130px;
+    height: 20px;
+
+    position: absolute;
+    top: 38%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-1 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-2 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-3 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 34%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-4 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-5 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+}
+
+.map-icon-3 {
+    width: 28px;
+    height: 24px;
+
+    position: absolute;
+    top: 52%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+}
+
+.p-location-3 {
+    width: 80%;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+
+
+    position: absolute;
+    top: 52%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.calendar-icon-3 {
+    width: 28px;
+    height: 24px;
+
+    position: absolute;
+    top: 68%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+}
+
+.p-next-date-3 {
+    width: 80%;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+
+
+    position: absolute;
+    top: 68%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.button-ver-horarios-3 {
+    background-color: #09A6A3;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    padding-top: 3px;
+    text-align: center;
+    height: 23px;
+    width: 120px;
+
+    position: absolute;
+    top: 85%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+}
+
+.button-ver-horarios-3:hover {
+    background-color: #0d817f;
+    border-radius: 4px;
+    transition: 0.4s;
+  
+}
+
+/* Segunda Linha */
+
+.card-timetable-4 {
+    border: 1px solid rgb(198, 198, 198);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.2);
+    
+    width: 340px;
+    height: 200px;
+    border-radius: 6px;
+
+    position: relative;
+    top: 44%;
+    left: 16%;
+    transform: translate(-50%, -50%);
+}
+
+.image-dra-ana-4 {
+    width: 70px;
+    height: 70px;
+    border-radius: 80px;
+    border: 1px solid black;
+
+    position: relative;
+    top: 22%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+}
+
+.h2-card-timetable-4 {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    width: 70%;
+
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.image-icon-verified-4 {
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    top: 10%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+}
+
+.p-card-timetable-4 {
+    /* border: 1px solid black; */
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    width: 210px;
+    height: 30px;
+
+    position: absolute;
+    top: 24%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+}
+
+.stars-rate-4 {
+    width: 130px;
+    height: 20px;
+
+    position: absolute;
+    top: 38%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-1 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-2 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-3 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 34%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-4 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-5 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+}
+
+.map-icon-4 {
+    width: 28px;
+    height: 24px;
+
+    position: absolute;
+    top: 52%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+}
+
+.p-location-4 {
+    width: 80%;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+
+
+    position: absolute;
+    top: 52%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.calendar-icon-4 {
+    width: 28px;
+    height: 24px;
+
+    position: absolute;
+    top: 68%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+}
+
+.p-next-date-4 {
+    width: 80%;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+
+
+    position: absolute;
+    top: 68%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.button-ver-horarios-4 {
+    background-color: #09A6A3;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    padding-top: 3px;
+    text-align: center;
+    height: 23px;
+    width: 120px;
+
+    position: absolute;
+    top: 85%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+}
+
+.button-ver-horarios-4:hover {
+    background-color: #0d817f;
+    border-radius: 4px;
+    transition: 0.4s;
+  
+}
+
+.card-timetable-5 {
+    border: 1px solid rgb(198, 198, 198);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.2);
+    
+    width: 340px;
+    height: 200px;
+    border-radius: 6px;
+
+    position: absolute;
+    top: 103%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-dra-ana-5 {
+    width: 70px;
+    height: 70px;
+    border-radius: 80px;
+    border: 1px solid black;
+
+    position: relative;
+    top: 22%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+}
+
+.h2-card-timetable-5 {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    width: 70%;
+
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.image-icon-verified-5 {
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    top: 10%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+}
+
+.p-card-timetable-5 {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    width: 210px;
+    height: 30px;
+
+    position: absolute;
+    top: 24%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+}
+
+.stars-rate-5 {
+    width: 130px;
+    height: 20px;
+
+    position: absolute;
+    top: 38%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-1 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-2 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-3 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 34%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-4 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-5 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+}
+
+.map-icon-5 {
+    width: 28px;
+    height: 24px;
+
+    position: absolute;
+    top: 52%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+}
+
+.p-location-5 {
+    width: 80%;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+
+
+    position: absolute;
+    top: 52%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.calendar-icon-5 {
+    width: 28px;
+    height: 24px;
+
+    position: absolute;
+    top: 68%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+}
+
+.p-next-date-5 {
+    width: 80%;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+
+
+    position: absolute;
+    top: 68%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.button-ver-horarios-5 {
+    background-color: #09A6A3;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    padding-top: 3px;
+    text-align: center;
+    height: 23px;
+    width: 120px;
+
+    position: absolute;
+    top: 85%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+}
+
+.button-ver-horarios-5:hover {
+    background-color: #0d817f;
+    border-radius: 4px;
+    transition: 0.4s;
+  
+}
+
+.card-timetable-6 {
+    border: 1px solid rgb(198, 198, 198);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.2);
+    
+    width: 340px;
+    height: 200px;
+    border-radius: 6px;
+
+    position: absolute;
+    top: 103%;
+    left: 84%;
+    transform: translate(-50%, -50%);
+}
+
+.image-dra-ana-6 {
+    width: 70px;
+    height: 70px;
+    border-radius: 80px;
+    border: 1px solid black;
+
+    position: relative;
+    top: 22%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+}
+
+.h2-card-timetable-6 {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    width: 70%;
+
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.image-icon-verified-6 {
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    top: 10%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+}
+
+.p-card-timetable-6 {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    width: 210px;
+    height: 30px;
+
+    position: absolute;
+    top: 24%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+}
+
+.stars-rate-6 {
+    width: 130px;
+    height: 20px;
+
+    position: absolute;
+    top: 38%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-1 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-2 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-3 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 34%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-4 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.image-star-5 {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    top: 50%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+}
+
+.map-icon-6 {
+    width: 28px;
+    height: 24px;
+
+    position: absolute;
+    top: 52%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+}
+
+.p-location-6 {
+    width: 80%;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+
+
+    position: absolute;
+    top: 52%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.calendar-icon-6 {
+    width: 28px;
+    height: 24px;
+
+    position: absolute;
+    top: 68%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+}
+
+.p-next-date-6 {
+    width: 80%;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+
+
+    position: absolute;
+    top: 68%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.button-ver-horarios-6 {
+    background-color: #09A6A3;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    padding-top: 3px;
+    text-align: center;
+    height: 23px;
+    width: 120px;
+
+    position: absolute;
+    top: 85%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+}
+
+.button-ver-horarios-6:hover {
+    background-color: #0d817f;
+    border-radius: 4px;
+    transition: 0.4s;
+  
+}
+
+
+/* End of Timetable card */

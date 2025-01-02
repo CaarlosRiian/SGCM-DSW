@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/detalhes_consulta.css">
+    <title>Detalhes Consulta</title>
+</head>
+<body>
+    <div class="container-header">
+        <div class="content-left">
+            <a href="home.html">
+                <img src="images/header/logo-header.png" alt="logo do header" class="logo-header">
+                <h1 class="h1-name-logo">ConsultaFácil</h1>
+                <a href="#">
+                    <h1 class="h1-explorar-header">Explorar</h1>
+                </a>
+            </a>
+        </div>
+        <div class="content-right">
+            <a href="#" class="content-notification" id="notifications-btn">
+                <img src="images/icons_images/notifications_icon.png" alt="icon notification" class="notification-header-image">
+            </a>
+            <a href="#" class="content-manage-account" id="profile-btn">
+                <img src="images/icons_images/manage_accounts_icon.png" alt="manage accounts icon" class="manage_accounts_image">
+                <h1 class="h1-perfil-header">Meu Perfil</h1>
+            </a>
+        </div>
+    </div>
+    <div class="container-minimap">
+        <a href="home.html" class="mini-map-home">Home</a>
+        <p class="barra-separadora">/</p>
+        <a href="horarios.html" class="mini-map-name-doctor">Dra.Ana Maria Nogueira</a>
+        <p class="barra-separadora-2">/</p>
+        <a href="detalhes_consulta.html" class="mini-map-name-doctor-2">Detalhes da Consulta</a>
+        <p class="linha-separadora"></p>
+    </div>
+    <div class="container-info-doctor">
+        <img src="images/horarios/dra_ana-info.png" alt="foto da doutora" class="picture-doctor">
+        <h2 class="h2-name-doctor">Dra. Ana Maria Nogueira</h2>
+        <img src="images/horarios/verify-2.png" alt="verificado" class="verify-doctor">
+        <p class="p-info-doctor">Dermatologista, especialista em estética e cancer de pele.</p>
+        <button class="button-rate">Avaliar Médico(a)</button>
+        <button class="button-report">Denunciar Médico(a)</button>
+    </div>
+    <div class="container-details">
+        <h1 class="h1-container-details">Detalhes da Consulta</h1>
+        <div class="check-consultation">
+            <img src="images/detalhes_consulta/verificado_1.png" alt="Verificado" class="verification-1">
+            <p class="p-container-details-1">Consulta agendada</p>
+            <img src="images/detalhes_consulta/nao_verificado.png" alt="Verificado" class="verification-2">
+            <p class="p-container-details-2">Consulta realizada</p>
+            <img src="images/detalhes_consulta/nao_verificado.png" alt="Verificado" class="verification-3">
+            <p class="p-container-details-3">Avaliar Consulta</p>
+        </div>
+        <div class="content-details">
+            <img src="images/detalhes_consulta/icon-calendar.png"  alt="icone do calendario" class="calendar">
+            <p class="p-calendar">15:00 às 15:30 - 25 de Novembro de 2024</p>
+            <img src="images/detalhes_consulta/tag-price.png"  alt="tag-price" class="tag-price">
+            <p class="p-tag-price">R$ 400,00</p>
+            
+            <h2 class="h2-2-how-acess">Como acessar?</h2>
+            <p class="time-to-consultation">No horário da consulta acesse o link disponível abaixo</p>
+            <button class="button-link-to-meet">Acessar Consulta</button>
+            
+            <p class="linha-separadora-2"></p>
+        </div>
+
+        <a href="#"></a><button class="button-archives">Baixar arquivos</button></a>
+        <a href="#"></a><button class="button-cancel-consutation">Cancelar Consulta</button></a>
+
+        <!-- Modal Meu Perfil -->
+        <div class="modal" id="profile-modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-modal">&times;</span>
+    
+                <ul>
+                    <li><a href="configurar_perfil.html">Configurar Perfil</a></li>
+                    <li><a href="configurar_conta.html">Configurar Conta</a></li>
+                    <li><a href="minha_consulta.html">Minhas Consultas</a></li>
+                </ul>
+                <button id="logout-btn"><a href="login.html">Sair</a></button>
+            </div>
+        </div>
+        <!-- Fim do Modal Meu Perfil -->
+    
+         <!-- Modal de Notificações -->
+        <div class="modal" id="notifications-modal">
+            <h3>Notificações</h3>
+            <span class="close-btn-notification-modal" id="close-notifications-modal">&times;</span>
+            <div class="modal-content">
+                <ul id="notifications-list">
+                    <li>Você tem uma nova consulta marcada.</li>
+                    <li>Atualize suas informações de perfil.</li>
+                    <li>Receita médica disponível para download.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Fim do Modal de notificações -->
+    </div>
+
+    <script src="js/detalhes_consulta/d_c_modals.js"></script>
+    <script src="js/detalhes_consulta/d_c_notifications.js"></script>
+</body>
+</html>

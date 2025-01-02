@@ -1,0 +1,779 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* End of Fonts*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-header {
+    height: 4em;
+    width: 100%;
+    background-color: #00CCBE;
+    position: relative;
+}
+
+.content-left {
+    width: 40%;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.content-right {
+    width: 40%;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-header {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 50%;
+    left: 4%;
+    transform: translate(-50%, -50%);
+}
+
+a {  
+    text-decoration: none;
+}
+
+.h1-name-logo {
+    font-size: 20px;
+    font-family: "Jura", sans-serif;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+}
+
+.h1-explorar-header {
+    font-size: 18px;
+    font-family: "Jura", sans-serif;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+}
+
+/* Notification Icon */
+.content-notification {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.notification-header-image {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Manage Account */
+.content-manage-account {
+    width: 130px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+}
+
+.manage_accounts_image {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.h1-perfil-header {
+    width: 95px;
+    font-size: 18px;
+    font-family: "Jura", sans-serif;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-header {
+        height: auto;
+    }
+
+    .content-left, .content-right {
+        width: 100%;
+        height: auto;
+        position: static;
+        transform: none;
+        text-align: center;
+    }
+
+    .logo-header {
+        margin: 0 auto;
+    }
+
+    .h1-name-logo, .h1-explorar-header {
+        position: static;
+        transform: none;
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    .content-notification, .content-manage-account {
+        position: static;
+        transform: none;
+        margin: 10px auto;
+    }
+
+    .notification-header-image, .manage_accounts_image {
+        margin: 0 auto;
+    }
+
+    .h1-perfil-header {
+        position: static;
+        transform: none;
+        font-size: 16px;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .h1-name-logo, .h1-explorar-header, .h1-perfil-header {
+        font-size: 14px;
+    }
+
+    .logo-header {
+        width: 50px;
+        height: 50px;
+    }
+
+    .notification-header-image, .manage_accounts_image {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Modal Meu Perfil */
+.modal {
+    display: none; 
+    position: relative;
+    top: -30px; 
+    left: 750px; 
+    width: 180px; 
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1000; 
+    padding: 10px;
+}
+
+/* Modal content */
+.modal-content {
+    text-align: center;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 0px;
+    left: 180px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Modal links */
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.modal-content ul li {
+    margin: 10px 0;
+}
+
+.modal-content ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: color 0.3s;
+}
+
+.modal-content ul li a:hover {
+    color: rgb(87, 87, 87)
+}
+
+/* Logout button */
+#logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+#logout-btn > a {
+    color: white;
+}
+
+#logout-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Fim do modal meu perfil */
+
+/* Modal de Notificações */
+#notifications-modal {
+    display: none; 
+    position: absolute;
+    top: -30px; 
+    left: 540px; 
+    width: 300px;
+    z-index: 1000;
+}
+
+#notifications-modal .modal-content {
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#notifications-modal h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+#notifications-modal ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#notifications-modal ul li {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.close-btn-notification-modal {
+    position: relative;
+    top: -22px;
+    left: 280px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Fim do modal minhas notificações */
+
+/* MiniMap */
+
+.container-minimap {
+    height: 25px;
+    width: 80%;
+
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mini-map-home {
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+    color: rgb(177, 177, 177);
+
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    transform: translate(-50%, -50%);
+}
+
+.barra-separadora {
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+    color: rgb(177, 177, 177);
+
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.mini-map-name-doctor {
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+    color: rgb(177, 177, 177);
+
+    position: absolute;
+    top: 40%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+}
+
+.linha-separadora {
+    border-bottom: 1px solid rgb(177, 177, 177);
+
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* End of MiniMap */
+
+/* Info Doctor */
+
+.container-info-doctor {
+    width: 80%;
+    height: 30%;
+
+    /* border: 1px solid black; */
+
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.picture-doctor {
+    width: 170px;
+    height: 170px;
+
+    border-radius: 100px;
+    border: 1px solid black;
+
+    position: absolute;
+    top: 50%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+}
+
+.h2-name-doctor {
+    font-size: 25px;
+    font-family: "Inter", sans-serif;
+
+    position: absolute;
+    top: 20%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+}
+
+.verify-doctor {
+    width: 30px;
+    height: 30px;
+    font-family: "Inter", sans-serif;
+
+    position: absolute;
+    top: 20%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+}
+
+.p-info-doctor {
+    width: 265px;
+    height: 40px;
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+
+    position: absolute;
+    top: 40%;
+    left: 31%;
+    transform: translate(-50%, -50%);
+}
+
+.rate-stars {
+    width: 150px;
+    height: 30px;
+
+    position: absolute;
+    top: 60%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+}
+
+.star-1 {
+    width: 25px;
+    height: 25px;
+
+    position: relative;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.star-2 {
+    width: 25px;
+    height: 25px;
+
+    position: relative;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.star-3 {
+    width: 25px;
+    height: 25px;
+
+    position: relative;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.star-4 {
+    width: 25px;
+    height: 25px;
+
+    position: relative;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.star-5 {
+    width: 25px;
+    height: 25px;
+
+    position: relative;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.button-rate {
+    width: 170px;
+    height: 35px;
+    background-color: #00CCBE;
+    border: none;
+    border-radius:4px;
+    color: white;
+    font-size: 17px;
+    font-family: "Inter", sans-serif;
+
+    position: relative;
+    top: 50%;
+    left: 450%;
+    transform: translate(-50%, -50%);
+}
+
+.button-rate:hover {
+    background-color: #068a82;
+    transition: 0.4s;
+    cursor: pointer;
+    
+}
+
+.linha-separadora-2 {
+    border-bottom: 1px solid rgb(177, 177, 177);
+    width: 535px;
+
+    position: relative;
+    top: 99%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+/* End of Info Doctor */
+
+/* TimeTable */
+
+.container-timetable {
+    width: 80%;
+    height: 550px;
+
+    /* border: 1px solid black; */
+
+    position: absolute;
+    top: 89%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.h1-timetable {
+    font-family: "Jura", sans-serif;
+    font-size: 22px;
+
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timetable-cards {
+    width: 100%;
+    height: 90%;
+
+    /* border: 1px solid black; */
+
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.h2-timetable-cards {
+    font-family: "Jura", sans-serif;
+    font-size: 22px;
+
+    position: absolute;
+    top: 6%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.timetable-card-1 {
+    width: 330px;
+    height: 150px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+
+    position: absolute;
+    top: 30%;
+    left: 15.5%;
+    transform: translate(-50%, -50%);
+}
+
+.timetable-h2-card-1 {
+    font-family: "Jura", sans-serif;
+    font-size: 15px;
+    width: 57%;
+
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.timetable-p-card-1 {
+    font-family: "Jura", sans-serif;
+    font-size: 15px;
+
+    width: 35%;
+
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 25%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+}
+
+.timetable-time-card-1 {
+    font-family: "Jura", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timetable-button-card-1 {
+    width: 150px;
+    height: 30px;
+    border: none;
+    color: white;
+    background-color: #00CCBE;
+    border-radius: 4px;
+
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timetable-button-card-1:hover {
+    background-color: #09988f;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.timetable-card-2 {
+    width: 330px;
+    height: 150px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+
+    position: absolute;
+    top: 30%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.timetable-h2-card-2 {
+    font-family: "Jura", sans-serif;
+    font-size: 15px;
+    width: 57%;
+
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.timetable-p-card-2 {
+    font-family: "Jura", sans-serif;
+    font-size: 15px;
+
+    width: 35%;
+
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 25%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+}
+
+.timetable-time-card-2 {
+    font-family: "Jura", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timetable-button-card-2 {
+    width: 150px;
+    height: 30px;
+    border: none;
+    color: white;
+    background-color: #00CCBE;
+    border-radius: 4px;
+
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timetable-button-card-2:hover {
+    background-color: #09988f;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.h2-timetable-cards-2 {
+    font-family: "Jura", sans-serif;
+    font-size: 22px;
+
+    position: absolute;
+    top: 55%;
+    left: 8.4%;
+    transform: translate(-50%, -50%);
+}
+
+.timetable-card-3 {
+    width: 330px;
+    height: 150px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+
+    position: absolute;
+    top: 78%;
+    left: 15.5%;
+    transform: translate(-50%, -50%);
+}
+
+.timetable-h2-card-3 {
+    font-family: "Jura", sans-serif;
+    font-size: 15px;
+    width: 57%;
+
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.timetable-p-card-3 {
+    font-family: "Jura", sans-serif;
+    font-size: 15px;
+
+    width: 35%;
+
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 25%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+}
+
+.timetable-time-card-3 {
+    font-family: "Jura", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timetable-button-card-3 {
+    width: 150px;
+    height: 30px;
+    border: none;
+    color: white;
+    background-color: #00CCBE;
+    border-radius: 4px;
+
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timetable-button-card-3:hover {
+    background-color: #09988f;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+/* End of TimeTable */

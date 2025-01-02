@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horários Disponiveis</title>
+    <link rel="stylesheet" href="styles/horarios.css">
+</head>
+<body>
+    <div class="container-header">
+        <div class="content-left">
+            <a href="home.html">
+                <img src="images/header/logo-header.png" alt="logo do header" class="logo-header">
+                <h1 class="h1-name-logo">ConsultaFácil</h1>
+                <a href="#">
+                    <h1 class="h1-explorar-header">Explorar</h1>
+                </a>
+            </a>
+        </div>
+        <div class="content-right">
+            <a href="#" class="content-notification" id="notifications-btn">
+                <img src="images/icons_images/notifications_icon.png" alt="icon notification" class="notification-header-image">
+            </a>
+            <a href="#" class="content-manage-account" id="profile-btn">
+                <img src="images/icons_images/manage_accounts_icon.png" alt="manage accounts icon" class="manage_accounts_image">
+                <h1 class="h1-perfil-header">Meu Perfil</h1>
+            </a>
+        </div>
+    </div>
+    <div class="container-minimap">
+        <a href="home.html" class="mini-map-home">Home</a>
+        <p class="barra-separadora">/</p>
+        <a href="#" class="mini-map-name-doctor">Dra.Ana Maria Nogueira</a>
+        <p class="linha-separadora"></p>
+    </div>
+    <div class="container-info-doctor">
+        <img src="images/horarios/dra_ana-info.png" alt="foto da doutora" class="picture-doctor">
+        <h2 class="h2-name-doctor">Dra. Ana Maria Nogueira</h2>
+        <img src="images/horarios/verify-2.png" alt="verificado" class="verify-doctor">
+        <p class="p-info-doctor">Dermatologista, especialista em estética e cancer de pele.</p>
+        <div class="rate-stars">
+            <img src="images/horarios/star-rate.png" alt="estrela-1" class="star-1">
+            <img src="images/horarios/star-rate.png" alt="estrela-2" class="star-2">
+            <img src="images/horarios/star-rate.png" alt="estrela-3" class="star-3">
+            <img src="images/horarios/star-rate.png" alt="estrela-4" class="star-4">
+            <img src="images/horarios/star_rate_2.png" alt="estrela-5" class="star-5">
+
+            <button class="button-rate">Avaliar Médico(a)</button>
+            <p class="linha-separadora-2"></p>
+        </div>
+    </div>
+    <div class="container-timetable">
+        <h1 class="h1-timetable">Horários Disponiveis da Semana</h1>
+        <div class="timetable-cards">
+            <h2 class="h2-timetable-cards">Segunda Feira 25/11</h2>
+            <div class="timetable-card-1">
+                <h2 class="timetable-h2-card-1">Dra. Ana Maria Nogueira</h2>
+                <p class="timetable-p-card-1">Dermatologista</p>
+                <h1 class="timetable-time-card-1">Horário: 14:30 - 15:00</h1>
+                <button class="timetable-button-card-1">Marcar Horário</button>
+            </div>
+
+            <div class="timetable-card-2">
+                <h2 class="timetable-h2-card-2">Dra. Ana Maria Nogueira</h2>
+                <p class="timetable-p-card-2">Dermatologista</p>
+                <h1 class="timetable-time-card-2">Horário: 15:00 - 15:30</h1>
+                <button class="timetable-button-card-2">Marcar Horário</button>
+            </div>
+
+            <h2 class="h2-timetable-cards-2">Terça Feira 26/11</h2>
+
+            <div class="timetable-card-3">
+                <h2 class="timetable-h2-card-3">Dra. Ana Maria Nogueira</h2>
+                <p class="timetable-p-card-3">Dermatologista</p>
+                <h1 class="timetable-time-card-3">Horário: 15:00 - 15:30</h1>
+                <button class="timetable-button-card-3">Marcar Horário</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Meu Perfil -->
+    <div class="modal" id="profile-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+
+            <ul>
+                <li><a href="configurar_perfil.html">Configurar Perfil</a></li>
+                <li><a href="configurar_conta.html">Configurar Conta</a></li>
+                <li><a href="minha_consulta.html">Minhas Consultas</a></li>
+            </ul>
+            <button id="logout-btn"><a href="login.html">Sair</a></button>
+        </div>
+    </div>
+    <!-- Fim do Modal Meu Perfil -->
+
+     <!-- Modal de Notificações -->
+    <div class="modal" id="notifications-modal">
+        <h3>Notificações</h3>
+        <span class="close-btn-notification-modal" id="close-notifications-modal">&times;</span>
+        <div class="modal-content">
+            <ul id="notifications-list">
+                <li>Você tem uma nova consulta marcada.</li>
+                <li>Atualize suas informações de perfil.</li>
+                <li>Receita médica disponível para download.</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Fim do Modal de notificações -->
+
+    <script src="js/horarios/horarios_modals.js"></script>
+    <script src="js/horarios/horarios_notifications.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/cadastro_medico.css">
+    <title>Cadastrar Médico</title>
+</head>
+<body>
+    <div class="container-header">
+        <div class="content-left">
+            <a href="home.html">
+                <img src="images/header/logo-header.png" alt="logo do header" class="logo-header">
+                <h1 class="h1-name-logo">ConsultaFácil</h1>
+                <a href="#">
+                    <h1 class="h1-explorar-header">Explorar</h1>
+                </a>
+            </a>
+        </div>
+        <div class="content-right">
+            <a href="#" class="content-notification" id="notifications-btn">
+                <img src="images/icons_images/notifications_icon.png" alt="icon notification" class="notification-header-image">
+            </a>
+            <a href="#" class="content-manage-account" id="profile-btn">
+                <img src="images/icons_images/manage_accounts_icon.png" alt="manage accounts icon" class="manage_accounts_image">
+                <h1 class="h1-perfil-header">Meu Perfil</h1>
+            </a>
+        </div>
+    </div>
+    <div class="container-minimap">
+        <a href="#" class="mini-map-home">Home</a>
+        <p class="linha-separadora"></p>
+    </div>
+    <div class="container-register">
+        <h1 class="h1-register-doctor">Cadastrar Médico</h1>
+        <div class="form-register">
+            <span class="span-crm">CRM:</span>
+            <input type="text" placeholder="CRM:" class="crm-input">
+            <span class="span-cdim">Cédula de identidade médica</span>
+            <label class="crm-input-file-label" for="customFileInput" id="customFileLabel">Escolher arquivo</label>
+            <input type="file" id="customFileInput" class="crm-input-file">
+            
+            <span class="span-complete-name">Nome Completo:</span>
+            <input type="text" class="input-complete-name" placeholder="Nome completo">
+            <span class="span-cep">CEP:</span>
+            <input type="text" class="input-cep" placeholder="CEP">
+
+            <span class="span-address">Rua:</span>
+            <input type="text" placeholder="Endereço" class="input-address">
+
+            <span class="span-neighborhood">Bairro</span>
+            <input type="text" placeholder="Bairro" class="input-neighborhood">
+            <span class="span-number">Número:</span>
+            <input type="text" class="input-number" placeholder="Número">
+            
+            <span class="span-rg">RG:</span>
+            <input type="text" placeholder="RG" class="input-rg">
+
+            <span class="span-profile-pic">Foto do Perfil</span>
+            <label class="profile-pic-input-file-label" for="customFileInput_2" id="customFileLabel_2">Escolher arquivo</label>
+            <input type="file" id="customFileInput_2" class="profile-pic-input-file">
+
+            <button class="button-register-doctor">Cadastrar</button>
+        </div>
+    </div>
+
+        <!-- Modal Meu Perfil -->
+        <div class="modal" id="profile-modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-modal">&times;</span>
+    
+                <ul>
+                    <li><a href="configurar_perfil.html">Configurar Perfil</a></li>
+                    <li><a href="configurar_conta.html">Configurar Conta</a></li>
+                    <li><a href="minha_consulta.html">Minhas Consultas</a></li>
+                </ul>
+                <button id="logout-btn"><a href="login.html">Sair</a></button>
+            </div>
+        </div>
+        <!-- Fim do Modal Meu Perfil -->
+    
+         <!-- Modal de Notificações -->
+        <div class="modal" id="notifications-modal">
+            <h3>Notificações</h3>
+            <span class="close-btn-notification-modal" id="close-notifications-modal">&times;</span>
+            <div class="modal-content">
+                <ul id="notifications-list">
+                    <li>Você tem uma nova consulta marcada.</li>
+                    <li>Atualize suas informações de perfil.</li>
+                    <li>Receita médica disponível para download.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Fim do Modal de notificações -->
+
+    <script src="js/cadastro_medico/modals_perfil.js"></script>
+    <script src="js/cadastro_medico/cadastro_notification_modal.js"></script>
+    <script src="js/cadastro_medico/cadastro_medico.js"></script>
+</body>
+</html>
