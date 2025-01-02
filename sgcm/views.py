@@ -1,42 +1,38 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.contrib.auth.models import User
-from django.contrib.auth import authenticate
-from django.contrib.auth import login as login_django
-from django.contrib.auth.decorators import login_required
-from django.shortcuts import redirect
+from django.shortcuts import render, redirect
+from django.contrib.auth import login, authenticate, logout
+from django.contrib import messages
+from sgcm.forms import CustomUserCreationForm
 
-
-def login(request):
-    if request.method == "GET":   
-        return render(request, 'sgcm/pages/login.html')
-    else:
-        username = request.POST.get('username')
-        senha = request.POST.get('senha')
-
-        user = authenticate(request, username=username, password=senha)
-
-        if user:
-            login_django(request, user)
-            return redirect('home') 
+def home(request):
+    return render(request, 'sgcm/pages/home.html')
 
 def register(request):
-    if request.method == "GET":
-        return render(request, 'sgcm/pages/register.html')
+    if request.method == 'POST':
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("login")
+              
     else:
-        username = request.POST.get('username')
-        email = request.POST.get('email')
-        senha = request.POST.get('senha')
-        senha = request.POST.get('senha')
-        confirm_passw = request.POST.get('confirm_passw')
+        form = CustomUserCreationForm()
 
-        if senha != confirm_passw:
-            return HttpResponse('As senhas não coincidem.')
+    return render(request, 'registration/register.html', {'form': form})
 
-        user = User.objects.create_user(username=username, email=email, password=senha)
-        user.save()
-        return HttpResponse('Usuário Criado com sucesso!')
 
-@login_required
-def home(request):
-        return render(request, 'sgcm/pages/home.html')
+
+def login_view(request):
+    if request.method == "POST":
+        email = request.POST['email']
+        password = request.POST['password']
+        user = authenticate(request, email=email, password=password)
+        
+        if user is not None:
+            login(request, user)
+            return redirect('home')
+        else:
+            messages.error(request, "(Usuario) Email ou senha inválidas")
+    return render(request, 'registration/login.html')
+        
+def logout_view(request):
+    logout(request)
+    return redirect('login')

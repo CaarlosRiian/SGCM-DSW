@@ -1,0 +1,39 @@
+{% extends 'global/base.html' %}
+{% load static %}
+
+{% block css %}
+{% comment %} input {
+    padding: 10px;
+} {% endcomment %}
+{% endblock css %}
+
+{% block title %}Cadastrar-se{% endblock title %}
+
+{% block content %}
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <div class="teste">
+            {{ form.username.label }}
+            {{ form.username }}
+        </div>
+        
+
+        {{ form.email.label }}
+        {{ form.email }}
+
+        {{ form.password1.label }}
+        {{ form.password1 }}
+
+        {{ form.password2.label }}
+        {{ form.password2 }}
+
+        <button type="submit">Registrar</button>
+    </form>
+        
+    </div>
+</body>
+</html>
+
+{% endblock content %}
