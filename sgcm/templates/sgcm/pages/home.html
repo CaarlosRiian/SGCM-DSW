@@ -4,5 +4,12 @@
 {% block title %}Página Inicial{% endblock %}
 
 {% block content %}
+
     <h1>Você está na pagina inicial</h1>
+    {% if user.is_authenticated %}
+        <h1>Seja Bem vindo, {{ user.username}}</h1>
+    {% else %}
+        <p>Você não está logado.</p>
+    {% endif %}
+
 {% endblock %}

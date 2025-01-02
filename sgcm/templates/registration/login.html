@@ -4,13 +4,25 @@
 {% block title %}Logar-se{% endblock title %}
 
 {% block content %}
+    <div class="container-content-login">
+        <div class="content-login">
+            <img src="{% static 'sgcm/images/login/logo-image.png' %}" alt="image-logo"    class="image-logo-login" />
+            <h1 class="h1-principal">ConsultaFácil</h1>
+        </div>
+        <h1 class="linha-separadora-login"></h1>
+        <h2 class="h2-logar">Logar-se</h2>
 
-    <form action="." method="POST">
-        {% csrf_token %}
-
-        {{ form.as_p }}
-        
-        <button type="submit">Logar</button>
-    </form>
-
+        <form action="." method="POST">
+             {% csrf_token %}
+             <p class="p1-form-email-login">E-mail</p>
+             <input type="email" name="username" placeholder="email@email.com" class="input-email-login">
+             <p class="p2-form-pass-login">Senha</p>
+             <input type="password" name="password" placeholder="Digite sua senha" class="input-pass-login" />
+             <button type="submit" class="button-login">Logar</button>
+         </form>
+        <p class="p-other-option-login">Não possui uma conta? <a href="{% url 'register' %}">Cadastre-se</a></p>
+    </div>
+    <div class="container-images-login">
+        <img src="{% static 'sgcm/images/login/pessoas-saude.png' %}" alt="imagem depessoas da area de saúde" class="profissionais-saude-login">
+    </div> 
 {% endblock content %}

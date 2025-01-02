@@ -1,37 +1,35 @@
 {% extends 'global/base.html' %}
 {% load static %}
 
-{% block css %}
-{% comment %} input {
-    padding: 10px;
-} {% endcomment %}
-{% endblock css %}
-
 {% block title %}Cadastrar-se{% endblock title %}
 
 {% block content %}
-
-    <form method="POST">
-        {% csrf_token %}
-
-        <div class="teste">
-            {{ form.username.label }}
-            {{ form.username }}
+    <div class="container-content-register">
+        <div class="content-register">
+            <div id="container-1">
+                <img src="{% static 'sgcm/images/login/logo-image.png' %}"  alt="image-logo" class="image-logo" />
+                <h1 class="h1-principal">ConsultaFácil</h1>
+            </div>
+            <h1 id="linha-separadora"></h1>
+            <h2 class="h2-cadastrar">Cadastre-se</h2>
+            <div id="container-2">
+            <form method="POST">
+                {% csrf_token %}
+                <p class="p1-form-user">Nome de usuário</p>
+                <input type="text" placeholder="Usuário" name="username"   class="input-user" required />
+                <p class="p2-form-email">E-mail</p>
+                <input type="email" placeholder="email@email.com" name="email" class="input-email" required/>
+                <p class="p3-form-pass">Senha</p>
+                <input type="password" placeholder="Digite sua senha"       name="password1" class="input-pass" required /> 
+                <p class="p4-form-cpass">Confirmar Senha</p>
+                <input type="password" placeholder="Digite sua senha"       name="password2" class="input-c-pass" required />
+                <button type="submit" class="button-register">Registrar</button>
+            </form>
+            <p class="p-other-option">Caso já possua uma conta, <a href="{% url 'login' %}">Logar-se</a></p> 
         </div>
-        
-
-        {{ form.email.label }}
-        {{ form.email }}
-
-        {{ form.password1.label }}
-        {{ form.password1 }}
-
-        {{ form.password2.label }}
-        {{ form.password2 }}
-
-        <button type="submit">Registrar</button>
-    </form>
-        
+    </div>
+    <div class="container-images">
+        <img src="{% static 'sgcm/images/login/pessoas-saude.png' %}" alt="imagem de pessoas da area de saúde" class="profissionais-saude">
     </div>
 </body>
 </html>

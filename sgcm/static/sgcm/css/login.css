@@ -9,39 +9,28 @@
     padding: 0px;
 }
 
-.container-left {
+.container-content-login {
     width: 50%;
     height: 99%;
-
 }
 
-.content-main-form {
-    width: 90%;
-    height: 90%;
-
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.container-1 {
-    width: 500px; 
-    height: 50px; 
+.content-login {
+    width: 50%;
+    height: 10%;
 
     position: absolute;
-    top: 10%;
-    left: 50%;
+    top: 19%;
+    left: 25%;
     transform: translate(-50%, -50%);
 }
 
-.image-logo {
+.image-logo-login {
     width: 60px;
     height: 60px;
 
     position: relative;
     top: 50%;
-    left: 22%;
+    left: 27%;
     transform: translate(-50%, -50%);
 }
 
@@ -55,15 +44,15 @@
     transform: translate(-50%, -50%);
 }
 
-#linha-separadora {
-    width: 67%;
+.linha-separadora-login {
+    width: 35%;
     color: white;
     border-bottom: 1px solid black;
     padding-top: 70px;
 
     position: absolute;
-    top: 15%;
-    left: 50%;
+    top: 22%;
+    left: 25%;
     transform: translate(-50%, -50%);
 }
 
@@ -74,29 +63,19 @@
     font-weight: 700;
 
     position: absolute;
-    top: 28%;
-    left: 27%;
+    top: 34%;
+    left: 13%;
     transform: translate(-50%, -50%);
 }
 
-#container-2 {
-    width: 450px;
-    height: 300px;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.p1-form-email {
+.p1-form-email-login {
     font-size: 15px;
     font-family: "Inter", sans-serif;
     font-weight: 700;
 
     position: absolute;
-    top: 31%;
-    left: 7%;
+    top: 42%;
+    left: 9.5%;
     transform: translate(-50%, -50%);
 }
 
@@ -109,8 +88,8 @@
     border-radius: 4px;
 
     position: absolute;
-    top: 42%;
-    left: 50%;
+    top: 48%;
+    left: 25%;
     transform: translate(-50%, -50%);
 }
 
@@ -127,7 +106,7 @@
 
     position: absolute;
     top: 55%;
-    left: 6.6%;
+    left: 9.5%;
     transform: translate(-50%, -50%);
 }
 
@@ -140,8 +119,8 @@
     border-radius: 4px;
 
     position: absolute;
-    top: 66%;
-    left: 50%;
+    top: 62%;
+    left: 25%;
     transform: translate(-50%, -50%);
 }
 
@@ -151,18 +130,7 @@
     font-family: "Inter", sans-serif;
 }
 
-#container-3-login {
-    width: 450px;
-    height: 100px;
-
-    position: absolute;
-    top: 73%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-.button-register {
+.button-login {
     background-color: #09A6A3;
     color: #ffffff;
     width: 170px;
@@ -173,31 +141,31 @@
     border-radius: 4px;
 
     position: absolute;
-    top: 50%;
-    left: 19%;
+    top: 74%;
+    left: 14%;
     transform: translate(-50%, -50%);  
 }
 
-.button-register:hover {
+.button-login:hover {
     background-color: #0a8886;
     color: #ffffff;
     transition: 0.4s; 
     cursor: pointer;
 }
 
-.p-other-option {
+.p-other-option-login {
     width: 300px;
     font-size: 14px;
     font-family: "Inter", sans-serif;
     font-weight: 300;
 
     position: absolute;
-    top: 50%;
-    left: 78%;
+    top: 74%;
+    left: 35%;
     transform: translate(-50%, -50%);
 }
 
-.p-other-option a {
+.p-other-option-login a {
     text-decoration: none;
     font-size: 15px;
     font-family: "Inter", sans-serif;
@@ -205,7 +173,7 @@
     color: #076d6b;
 } 
 
-.container-images {
+.container-images-login {
     width: 50%;
     height: 102%;
     background-color: #00CCBE;
@@ -216,7 +184,7 @@
     transform: translate(-50%, -50%);
 }
 
-.profissionais-saude {
+.profissionais-saude-login {
     width: 450px;
     height: 450px;
 
@@ -224,4 +192,4 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+} 
