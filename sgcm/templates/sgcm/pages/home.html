@@ -5,11 +5,17 @@
 
 {% block content %}
 
+    {% include 'sgcm/partials/header.html' %}
+
     <h1>Você está na pagina inicial</h1>
     {% if user.is_authenticated %}
         <h1>Seja Bem vindo, {{ user.username}}</h1>
+
+        <a href="{% url 'logout' %}">Deslogar</a>
     {% else %}
         <p>Você não está logado.</p>
     {% endif %}
+
+
 
 {% endblock %}
