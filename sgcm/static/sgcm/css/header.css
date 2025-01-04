@@ -1,5 +1,266 @@
 .container-header {
-    border: 1px solid black;
+    background-color: #00CCBE;
     height: 4em;
     width: 100%;
 }
+
+.content-left {
+    width: 40%;
+    height: 50px;
+    position: relative;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-header {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 50%;
+    left: 4%;
+    transform: translate(-50%, -50%);
+}
+
+.h1-name-logo-header {
+    font-size: 20px;
+    font-family: "Jura", sans-serif;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+}
+
+.h1-explorar-header {
+    font-size: 18px;
+    font-family: "Jura", sans-serif;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+}
+
+.content-right {
+    width: 40%;
+    height: 50px;
+    position: absolute;
+    top: 5.5%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.notification-header-image {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 50%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+}
+
+.content-manage-account-header {
+    width: 130px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+}
+
+.manage_accounts_image {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.h1-perfil-header {
+    width: 95px;
+    font-size: 18px;
+    font-family: "Jura", sans-serif;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+.user-not-logged {
+    width: 80%;
+    height: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.p-user-not-lg-acess {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    width: 80%;
+    color: white;
+
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-link-header {
+    font-size: 17px;
+    font-family: "Inter", sans-serif;
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+
+    position: absolute;
+    top: 70%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+}
+.login-link-header:hover {
+    font-weight: 700;
+    transition: 0.4s;
+}
+
+.p-other-option-header {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: #fdfdfd;
+
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.register-link-header {
+    font-size: 17px;
+    font-family: "Inter", sans-serif;
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+
+    position: absolute;
+    top: 70%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+.register-link-header:hover {
+    font-weight: 700;
+    transition: 0.4s;
+}
+
+.container-minimap {
+    height: 25px;
+    width: 80%;
+
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mini-map-home {
+    font-size: 0.8rem; 
+    font-family: "Inter", sans-serif;
+    color: rgb(177, 177, 177);
+
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    transform: translate(-50%, -50%);
+}
+
+a {
+    text-decoration: none;
+}
+
+.linha-separadora {
+    border-bottom: 1px solid rgb(177, 177, 177);
+
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Modals My Profile */
+.modal-my-profile {
+    display: none; 
+    position: relative;
+    top: -13px; 
+    left: 870px; 
+    width: 180px; 
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1000; 
+    padding: 10px;
+}
+
+/* Modal content */
+.modal-content {
+    text-align: center;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 0px;
+    left: 180px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Modal links */
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.modal-content ul li {
+    margin: 10px 0;
+}
+
+.modal-content ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: color 0.3s;
+}
+
+.modal-content ul li a:hover {
+    color: rgb(87, 87, 87)
+}
+
+/* Logout button */
+#logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+#logout-btn > a {
+    color: white;
+}
+
+#logout-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Fim dos Modals */

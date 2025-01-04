@@ -2,6 +2,47 @@
 
 <div class="container-header">
     <div class="content-left">
-        opan
+        <a href="{% url 'home' %}">
+            <img src="{% static 'sgcm/images/header/logo-header.png' %}" alt="logo do header" class="logo-header">
+            <h1 class="h1-name-logo-header">ConsultaFácil</h1>
+            <a href="#">
+                <h1 class="h1-explorar-header">Explorar</h1>
+            </a>
+        </a>
+    </div>
+    <div class="content-right">
+        {% if user.is_authenticated %}
+            <a href="#" class="content-notification-header"     id="notifications-btn">
+                <img src="{% static 'sgcm/images/header/icons-header/notification-icon.png' %}" alt="icon notification"     class="notification-header-image" />
+            </a>
+            <a href="#" class="content-manage-account-header" id="profile-btn">
+                <img src="{% static 'sgcm/images/header/icons-header/manage_accounts_icon.png' %}"  alt="manage accounts icon"   class="manage_accounts_image" />
+                <h1 class="h1-perfil-header">Meu Perfil</h1>
+            </a>
+        {% else %}
+            <div class="user-not-logged">
+                <p class="p-user-not-lg-acess">Olá paciente, para acessar suas consultas</p>
+                <a href="{% url 'login' %}" class="login-link-header">Entre</a>
+                <p class="p-other-option-header">ou</p>
+                <a href="{% url 'register' %}" class="register-link-header">Cadastre-se</a>
+            </div>
+        {% endif %}
+    </div>
+    <div class="container-minimap">
+        <a href="{% url 'home' %}" class="mini-map-home">Página Inicial</a>
+        <p class="linha-separadora"></p>
     </div>
 </div>
+<!-- Modal Meu Perfil -->
+<div class="modal-my-profile" id="profile-modal">
+    <div class="modal-content">
+        <span class="close-btn" id="close-modal">&times;</span>
+        <ul>
+            <li><a href="configurar_perfil.html">Configurar Perfil</a></li>
+            <li><a href="configurar_conta.html">Configurar Conta</a></li>
+            <li><a href="minha_consulta.html">Minhas Consultas</a></li>
+        </ul>
+        <button id="logout-btn"><a href="{% url 'logout' %}">Sair</a></button>
+    </div>
+</div>
+<!-- Fim do Modal Meu Perfil -->
