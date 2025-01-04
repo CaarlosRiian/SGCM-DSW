@@ -1,8 +1,22 @@
 {% extends 'global/base.html' %}
 {% load static %}
 
-{% block title%}Inicio{% endblock %}
+{% block title %}Página Inicial{% endblock %}
 
 {% block content %}
-    <h1>Início</h1>
+
+    {% include 'sgcm/partials/header.html' %}
+
+    {% comment %} <h1>Você está na pagina inicial</h1>
+    {% if user.is_authenticated %}
+        <h1>Seja Bem vindo, {{ user.username}}</h1>
+
+        <a href="{% url 'logout' %}">Deslogar</a>
+    {% else %}
+        <p>Você não está logado.</p>
+    {% endif %} {% endcomment %}
+
+
+    <script src="{% static 'sgcm/js/home/modal_perfil.js' %}"></script>
+
 {% endblock %}
