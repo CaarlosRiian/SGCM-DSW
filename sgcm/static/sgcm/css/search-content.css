@@ -1,0 +1,32 @@
+.greeting-search-content {
+    width: 50%;
+    height: 30px;
+
+    /* border: 1px solid black; */
+
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.greeting-h2-search-content {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+
+    position: absolute;
+    top: 50%;
+    left: 20.5%;
+    transform: translate(-50%, -50%);
+}
+
+.name-of-user-search-content {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    color: #09A6A3;
+}
+
+.greeting-h2-search-content-nt {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+}

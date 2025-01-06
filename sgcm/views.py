@@ -4,13 +4,19 @@ from django.contrib import messages
 from sgcm.forms import CustomUserCreationForm
 
 def home(request):
-    return render(request, 'sgcm/pages/home.html')
+    context = {}
+    if request.user.is_authenticated:
+        username_formatted = request.user.username.replace("_", " ")
+        context['username_formatted'] = username_formatted
+    return render(request, 'sgcm/pages/home.html', context)
 
 def register(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save(commit=False)
+            user.username = user.username.replace(" ", "_")
+            user.save()
             return redirect("login")
               
     else:

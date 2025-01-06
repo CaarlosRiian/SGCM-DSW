@@ -1,0 +1,9 @@
+{% load static  %}
+
+<div class="greeting-search-content">
+    {% if user.is_authenticated %}
+        <h2 class="greeting-h2-search-content">Olá, <span class="name-of-user-search-content">{{ username_formatted }}</span>.</h2> 
+    {% else %}
+        <h2 class="greeting-h2-search-content-nt">Olá Paciente, faça login para ver as suas consultas.</h2> 
+    {% endif %}
+</div>

@@ -19,7 +19,6 @@ window.addEventListener('click', (e) => {
 });
 
 logoutBtn.addEventListener('click', () => {
-    alert('Você saiu!');
     modal.style.display = 'none';
 });
 
