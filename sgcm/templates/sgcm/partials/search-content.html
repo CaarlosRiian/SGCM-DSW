@@ -7,3 +7,15 @@
         <h2 class="greeting-h2-search-content-nt">Olá Paciente, faça login para ver as suas consultas.</h2> 
     {% endif %}
 </div>
+<div class="search-bar-search-content">
+    <form method="get" action="">
+        <input 
+            type="text" 
+            name="search" 
+            placeholder="Busque por profissionais." 
+            class="input-search" 
+            value="{{ query }}"
+        >
+        <button type="submit">Buscar</button>
+    </form>
+</div>
