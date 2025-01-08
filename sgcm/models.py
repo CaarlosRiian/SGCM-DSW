@@ -10,6 +10,7 @@ class CustomUser(AbstractUser):
 
 class Specialization(models.Model):
     name = models.CharField(max_length=100, unique=True)
+    icon = models.ImageField(upload_to='specialization/icons/', blank=True, null=False)
 
     def __str__(self):
         return self.name

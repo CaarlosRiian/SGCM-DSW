@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from sgcm.forms import CustomUserCreationForm
-from sgcm.models import HealthProfessional
+from sgcm.models import *
 
 def home(request):
     context = {}
@@ -10,14 +10,15 @@ def home(request):
         username_formatted = request.user.username.replace("_", " ")
         context['username_formatted'] = username_formatted
 
-    query = request.GET.get("search", "")
-    if query:
-        professionals = HealthProfessional.objects.filter(specializations_name_icontains=query)
+    specialization_id = request.GET.get("search", "")
+    if specialization_id:
+        professionals = HealthProfessional.objects.filter(specializations__name__icontains=specialization_id).distinct()
     else:
         professionals = HealthProfessional.objects.all()
 
+    specializations = Specialization.objects.all()
     context['profissionais'] = professionals
-    context['query'] = query
+    context['specializations'] = specializations
     
     return render(request, 'sgcm/pages/home.html', context)
 

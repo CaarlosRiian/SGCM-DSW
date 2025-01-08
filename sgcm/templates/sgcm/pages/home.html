@@ -7,15 +7,7 @@
 
     {% include 'sgcm/partials/header.html' %}
     {% include 'sgcm/partials/search-content.html' %}
-
-    {% comment %} <h1>Você está na pagina inicial</h1>
-    {% if user.is_authenticated %}
-        <h1>Seja Bem vindo, {{ user.username}}</h1>
-
-        <a href="{% url 'logout' %}">Deslogar</a>
-    {% else %}
-        <p>Você não está logado.</p>
-    {% endif %} {% endcomment %}
+    {% include 'sgcm/partials/content-main.html' %}
 
 
     <script src="{% static 'sgcm/js/home/modal_perfil.js' %}"></script>

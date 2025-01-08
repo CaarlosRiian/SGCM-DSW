@@ -8,5 +8,7 @@ from .models import CustomUser
 admin.site.register(CustomUser, UserAdmin)
 
 admin.site.register(Specialization)
+class SpecializationAdmin(admin.ModelAdmin):
+    list_display = ('name', 'icon')
 
 admin.site.register(HealthProfessional)

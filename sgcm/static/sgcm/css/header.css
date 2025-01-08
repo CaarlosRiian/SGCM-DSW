@@ -193,8 +193,8 @@ a {
 /* Modals My Profile */
 .modal-my-profile {
     display: none; 
-    position: relative;
-    top: -13px; 
+    position: fixed;
+    top: 50px; 
     left: 870px; 
     width: 180px; 
     background: #ffffff;

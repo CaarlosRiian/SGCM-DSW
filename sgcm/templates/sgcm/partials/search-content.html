@@ -16,6 +16,21 @@
             class="input-search" 
             value="{{ query }}"
         >
-        <button type="submit">Buscar</button>
+        <button type="submit" class="button-submit-search-bar-content">Buscar</button>
     </form>
+</div>
+<div class="specializations-list">
+    {% for specialization in specializations %}
+        <a href="?specialization={{ specialization.id }}" class="specialization-card">
+            {% if specialization.icon %}
+                <img 
+                    src="{{ specialization.icon.url }}" 
+                    alt="icon-{{ specialization.name|lower }}" 
+                    class="specialization-icon">
+            {% else %}
+                <p class="no-icon">Sem ícone</p>
+            {% endif %}
+            <p class="specialization-name">{{ specialization.name }}</p>
+        </a>
+    {% endfor %}
 </div>
