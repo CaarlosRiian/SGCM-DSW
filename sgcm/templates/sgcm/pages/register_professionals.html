@@ -1,0 +1,11 @@
+{% extends 'global/base.html' %}
+{% load static %}
+
+{% block title %}Cadastrar Profissional{% endblock title %}
+
+{% block content %}
+    {% include 'sgcm/partials/register_professionals/header-r-p.html' %}
+    {% include 'sgcm/partials/register_professionals/form-professional.html' %}
+
+    <script src="{% static 'sgcm/js/home/modal_perfil.js' %}"></script>
+{% endblock content %}

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from sgcm.forms import CustomUserCreationForm
 from sgcm.models import *
@@ -54,3 +55,9 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('login')
+
+@login_required
+def view_teste_admin(request):
+    if not request.user.is_staff:
+        return redirect('home')
+    return render(request, 'sgcm/pages/register_professionals.html')

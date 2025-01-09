@@ -7,3 +7,28 @@
     left: 35%;
     transform: translate(-50%, -50%);
 }
+
+.container-timetable {
+    width: 80%;
+    height: 400px;
+    
+    position: absolute;
+    top: 79%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title-timetable {
+    width: 50%;
+    height: 35px;
+}
+
+.h1-title-timetable {
+    font-size: 23px ;
+    font-family: "Jura", sans-serif;
+
+    position: relative;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
