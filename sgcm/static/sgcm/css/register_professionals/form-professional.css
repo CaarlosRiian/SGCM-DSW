@@ -262,7 +262,7 @@
 
     position: absolute;
     top: 80%;
-    left: 23%;
+    left: 24%;
     transform: translate(-50%, -50%);
 }
 
@@ -274,7 +274,7 @@
     font-family: "Inter", sans-serif;
     font-size: 16px;
     height: 30px;
-    width: 60%;
+    width: 30%;
     padding-left: 10px;
     line-height: 30px;
     text-align: center;
@@ -286,7 +286,7 @@
 
     position: absolute;
     top: 86%;
-    left: 48.5%;
+    left: 34%;
     transform: translate(-50%, -50%);
     cursor: pointer;
 
@@ -297,6 +297,117 @@
 
 .profile-pic-input-file-label:hover {
     background-color: rgb(240, 240, 240);
+}
+
+.span-specializations {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+    font-family: "Inter", sans-serif;
+
+    position: absolute;
+    top: 80%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.input-select-specialization {
+    height: 32px;
+    width: 25%;
+
+    color: #000; 
+    background-color: #fff; 
+    border-radius: 4px;
+    border: 1px solid rgb(177, 177, 177);
+
+    position: absolute;
+    top: 86%;
+    left: 66%;
+    transform: translate(-50%, -50%);
+}
+.input-select-specialization, option {
+    font-size: 15px;
+    padding-left: 10px;
+    font-family: "Inter", sans-serif;
+}
+
+.label-email-form-professional {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+
+    position: absolute;
+    top: 97%;
+    left: 21.5%;
+    transform: translate(-50%, -50%);
+}
+
+.input-email-form-professional {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 30%;
+    padding-left: 10px;
+
+    border-radius: 4px;
+    border: 1px solid rgb(177, 177, 177);
+
+    position: absolute;
+    top: 103%;
+    left: 33.5%;
+    transform: translate(-50%, -50%);
+}
+
+.label-pass-form-professional{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+
+    position: absolute;
+    top: 97%;
+    left: 57.3%;
+    transform: translate(-50%, -50%);
+}
+
+.input-pass-form-professional {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 24%;
+    padding-left: 10px;
+
+    border-radius: 4px;
+    border: 1px solid rgb(177, 177, 177);
+
+    position: absolute;
+    top: 103%;
+    left: 66.5%;
+    transform: translate(-50%, -50%);
+}
+
+.label-confirm-pass-form-professional {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+
+    position: absolute;
+    top: 111%;
+    left: 25.5%;
+    transform: translate(-50%, -50%);
+}
+
+.input-confirm-pass-form-professional {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 30%;
+    padding-left: 10px;
+
+    border-radius: 4px;
+    border: 1px solid rgb(177, 177, 177);
+
+    position: absolute;
+    top: 117%;
+    left: 33.5%;
+    transform: translate(-50%, -50%);
 }
 
 .button-register-doctor {
@@ -310,7 +421,7 @@
     font-size: 16px;
 
     position: absolute;
-    top: 95%;
+    top: 130%;
     left: 25.5%;
     transform: translate(-50%, -50%);
 }

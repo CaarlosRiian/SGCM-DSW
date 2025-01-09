@@ -4,6 +4,11 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from sgcm.forms import CustomUserCreationForm
 from sgcm.models import *
+from sgcm.forms import *
+
+# Teste
+from django.contrib.auth.models import User
+
 
 def home(request):
     context = {}
@@ -56,8 +61,92 @@ def logout_view(request):
     logout(request)
     return redirect('login')
 
+# @login_required
+# def view_register_professional(request):
+#     if not request.user.is_staff:
+#         return redirect('home')
+    
+#     specializations = Specialization.objects.all()
+    
+#     if request.method == "POST":
+#         crm = request.POST.get('crm')
+#         medical_id = request.FILES.get('medical_id')  
+#         full_name = request.POST.get('full_name')
+#         cep = request.POST.get('cep')
+#         address = request.POST.get('address')
+#         neighborhood = request.POST.get('neighborhood')
+#         number = request.POST.get('number')
+#         rg = request.POST.get('rg')
+#         profile_pic = request.FILES.get('profile_pic')  
+
+#         health_professional = HealthProfessional.objects.create(
+#             crm=crm,
+#             medical_id=medical_id,
+#             full_name=full_name,
+#             cep=cep,
+#             address=address,
+#             neighborhood=neighborhood,
+#             number=number,
+#             rg=rg,
+#             profile_pic=profile_pic
+#         )
+
+#         selected_specializations = request.POST.getlist('specializations')
+#         print(f"Especializações selecionadas: {selected_specializations}")  
+#         if selected_specializations:
+#             health_professional.Specializations.set(selected_specializations)
+
+#         return redirect('register_professionals')
+    
+#     return render(request, 'sgcm/pages/register_professionals.html', {'specializations': specializations})
+
 @login_required
-def view_teste_admin(request):
-    if not request.user.is_staff:
+def view_register_professional(request):
+    if not request.user.is_staff:  # Apenas administradores podem cadastrar médicos
         return redirect('home')
-    return render(request, 'sgcm/pages/register_professionals.html')
+
+    if request.method == "POST":
+        # Obtendo os campos do formulário
+        user_email = request.POST.get('user_email')
+        password = request.POST.get('password')
+        confirm_password = request.POST.get('confirm_password')
+        crm = request.POST.get('crm')
+        full_name = request.POST.get('full_name')
+
+        # Validando se as senhas coincidem
+        if password != confirm_password:
+            # Renderiza a página com uma mensagem de erro
+            return render(request, 'sgcm/pages/register_professionals.html', {
+                'error': 'As senhas não coincidem. Tente novamente.',
+                'specializations': Specialization.objects.all(),  # Passa as especializações se necessário
+            })
+
+        # Criando o usuário
+        try:
+            user = User.objects.create_user(
+                username=user_email,
+                email=user_email,
+                password=password,
+            )
+
+            # Criando o médico (HealthProfessional)
+            HealthProfessional.objects.create(
+                user=user,
+                crm=crm,
+                full_name=full_name,
+                # Preencha os outros campos que você tem no formulário
+            )
+
+            # Redireciona para a lista de médicos ou uma página de sucesso
+            return redirect('list_professionals')  # Altere conforme necessário
+
+        except Exception as e:
+            # Renderiza a página com um erro genérico
+            return render(request, 'sgcm/pages/register_professionals.html', {
+                'error': f'Ocorreu um erro: {str(e)}',
+                'specializations': Specialization.objects.all(),
+            })
+
+    return render(request, 'sgcm/pages/register_professionals.html', {
+        'specializations': Specialization.objects.all(),  # Passa as especializações se necessário
+    })
