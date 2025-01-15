@@ -57,7 +57,7 @@
                 <h2 class="timetable-h2-card-1">Dra. Ana Maria Nogueira</h2>
                 <p class="timetable-p-card-1">Dermatologista</p>
                 <h1 class="timetable-time-card-1">Horário: 14:30 - 15:00</h1>
-                <button class="timetable-button-card-1">Marcar Horário</button>
+                <button class="timetable-button-card-1" id="markAppointmentBtn">Marcar Horário</button>
             </div>
 
             <div class="timetable-card-2">
@@ -107,7 +107,20 @@
     </div>
     <!-- Fim do Modal de notificações -->
 
+    <div class="modal-marcar-horario" id="appointmentModal">
+        <div class="modal-content-marcar-horario">
+            <p>Você deseja marcar Horário com:</p>
+            <h2 id="modal-doctor-marcar-horario">Dra. Ana Maria Nogueira</h2>
+            <p id="modal-time-marcar-horario">Horário: 14:30 - 15:00 Dia 25/11</p>
+            <div class="modal-buttons-marcar-horario">
+                <button id="confirmBtn-marcar-horario">Sim</button>
+                <button id="cancelBtn-marcar-horario">Não</button>
+            </div>
+        </div>
+    </div>
+
     <script src="js/horarios/horarios_modals.js"></script>
     <script src="js/horarios/horarios_notifications.js"></script>
+    <script src="js/horarios/marcar_horario.js"></script>
 </body>
 </html>

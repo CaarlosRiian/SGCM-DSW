@@ -33,7 +33,7 @@
         <a href="#" class="mini-map-conf-prof">Configurar Perfil</a>
         <p class="linha-separadora"></p>
     </div>
-    <div class="container-conf-profile">
+   <div class="container-conf-profile">
         <h1 class="conf-profile">Configurar Perfil</h1>
         <div class="container-content">
             <div class="card-content">
@@ -48,46 +48,74 @@
                 <p class="p-input-lastname">Sobrenome</p>
                 <input type="text" placeholder="Seu sobrenome..." class="placeholder-lastname">
                 <p class="p-input-cellphone">Telefone</p>
-                <input type="text" placeholder="(XX) XXXXX-XXXX"  class="input-cellphone">
+                <input type="text" placeholder="(XX) XXXXX-XXXX" class="input-cellphone" id="cellphoneInput" maxlength="15">
                 <p class="p-input-birthday">Data de Nascimento</p>
                 <input type="date" class="input-date">
 
                 <button class="button-cancel-changes">Cancelar</button>
                 <button class="button-saves-changes">Salvar Alterações</button>
+                <h3 class="alter-pass">Senha e autenticação</h3>
+                <button class="button-alter-pass" id="openModalBtn">Mudar senha</button>
             </div>
         </div>
     </div>
 
     <!-- Modal Meu Perfil -->
-    <div class="modal" id="profile-modal">
-        <div class="modal-content">
-            <span class="close-btn" id="close-modal">&times;</span>
+<div class="modal" id="profile-modal">
+    <div class="modal-content">
+        <span class="close-btn" id="close-modal">&times;</span>
 
-            <ul>
-                <li><a href="configurar_perfil.html">Configurar Perfil</a></li>
-                <li><a href="configurar_conta.html">Configurar Conta</a></li>
-                <li><a href="minha_consulta.html">Minhas Consultas</a></li>
-            </ul>
-            <button id="logout-btn"><a href="login.html">Sair</a></button>
-        </div>
+        <ul>
+            <li><a href="configurar_perfil.html">Configurar Perfil</a></li>
+            <li><a href="configurar_conta.html">Configurar Conta</a></li>
+            <li><a href="minha_consulta.html">Minhas Consultas</a></li>
+        </ul>
+        <button id="logout-btn"><a href="login.html">Sair</a></button>
     </div>
+</div>
     <!-- Fim do Modal Meu Perfil -->
 
      <!-- Modal de Notificações -->
-    <div class="modal" id="notifications-modal">
-        <h3>Notificações</h3>
-        <span class="close-btn-notification-modal" id="close-notifications-modal">&times;</span>
-        <div class="modal-content">
-            <ul id="notifications-list">
-                <li>Você tem uma nova consulta marcada.</li>
-                <li>Atualize suas informações de perfil.</li>
-                <li>Receita médica disponível para download.</li>
-            </ul>
-        </div>
+<div class="modal" id="notifications-modal">
+    <h3>Notificações</h3>
+    <span class="close-btn-notification-modal"id="close-notifications-modal">&times;</span>
+    <div class="modal-content">
+        <ul id="notifications-list">
+            <li>Você tem uma nova consulta marcada.</li>
+            <li>Atualize suas informações de perfil.</li>
+            <li>Receita médica disponível para download.</li>
+        </ul>
     </div>
-    <!-- Fim do Modal de notificações -->
+</div>
+<!-- Fim do Modal de notificações -->
 
-    <script src="js/"></script>
-    <script src="js/"></script>
+<div class="modal-alterpass" id="passwordModal">
+    <div class="modal-content">
+      <div class="modal-header">Alterar Senha</div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="currentPassword">Senha atual</label>
+          <input type="password" id="currentPassword" placeholder="Digite sua senha atual">
+        </div>
+        <div class="form-group">
+          <label for="newPassword">Nova senha</label>
+          <input type="password" id="newPassword" placeholder="Digite sua nova senha">
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirme a nova senha</label>
+          <input type="password" id="confirmPassword" placeholder="Confirme sua nova senha">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-close" id="closeModalBtn">Cancelar</button>
+        <button class="btn-submit">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+<script src="js/"></script>
+<script src="js/"></script>
+<script src="js/configurar_perfil/alter-pass.js"></script>
+<script src="js/configurar_perfil/inputs-conf-profile.js"></script>
 </body>
 </html>
