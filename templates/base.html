@@ -1,0 +1,203 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="auto">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.112.5">
+    
+    {% block styles %}
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/pricing.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+        <style>
+            .bd-placeholder-img {
+              font-size: 1.125rem;
+              text-anchor: middle;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              user-select: none;
+            }
+      
+            @media (min-width: 768px) {
+              .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+              }
+            }
+      
+            .b-example-divider {
+              width: 100%;
+              height: 3rem;
+              background-color: rgba(0, 0, 0, .1);
+              border: solid rgba(0, 0, 0, .15);
+              border-width: 1px 0;
+              box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+            }
+      
+            .b-example-vr {
+              flex-shrink: 0;
+              width: 1.5rem;
+              height: 100vh;
+            }
+      
+            .bi {
+              vertical-align: -.125em;
+              fill: currentColor;
+            }
+      
+            .nav-scroller {
+              position: relative;
+              z-index: 2;
+              height: 2.75rem;
+              overflow-y: hidden;
+            }
+      
+            .nav-scroller .nav {
+              display: flex;
+              flex-wrap: nowrap;
+              padding-bottom: 1rem;
+              margin-top: -1px;
+              overflow-x: auto;
+              text-align: center;
+              white-space: nowrap;
+              -webkit-overflow-scrolling: touch;
+            }
+      
+            .btn-bd-primary {
+              --bd-violet-bg: #712cf9;
+              --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+      
+              --bs-btn-font-weight: 600;
+              --bs-btn-color: var(--bs-white);
+              --bs-btn-bg: var(--bd-violet-bg);
+              --bs-btn-border-color: var(--bd-violet-bg);
+              --bs-btn-hover-color: var(--bs-white);
+              --bs-btn-hover-bg: #6528e0;
+              --bs-btn-hover-border-color: #6528e0;
+              --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+              --bs-btn-active-color: var(--bs-btn-hover-color);
+              --bs-btn-active-bg: #5a23c8;
+              --bs-btn-active-border-color: #5a23c8;
+            }
+            .bd-mode-toggle {
+              z-index: 1500;
+            }
+        </style>
+    {% endblock %}
+    
+    <title>{% block title %}{% endblock %}</title>
+
+    <meta name="theme-color" content="#712cf9">
+    
+  </head>
+  <body>
+    
+
+
+<div class="container py-3">
+  <header>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+        <img src="/static/assets/icons_svg/clinic.svg" alt="clinica">
+        <span class="fs-4">SGCM</span>
+      </a>
+
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        {% if user.is_authenticated or user.is_superuser %}
+          <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#confirmLogout">Sair</button>
+        {% else %}
+          <a href="/accounts/login/">
+            <button type="button" class="btn btn-outline-success">Entrar</button>
+          </a>
+        {% endif %}
+        </nav>
+    </div>
+  </header>
+
+  {% block messages %}
+    {% for message in messages %}
+      <div class="alert alert-{{message.tags}} alert-dismissible messages" role="alert">
+        {{ message }}
+        </button>
+      </div>
+    {% endfor %}
+  {% endblock messages %}
+
+  <div class="modal fade" id="confirmLogout" tabindex="-1" role="dialog" aria-labelledby="confirmLogoutLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmLogoutLabel">Confirmação de Saída</h5>
+        </div>
+        <div class="modal-body">
+          Tem certeza de que deseja sair?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <a href="/accounts/logout/">
+            <button type="button" class="btn btn-danger">Sair</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <small class="d-block mb-3 text-body-secondary">&copy; 2024-2025</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Valores</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Empatia</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Humanidade</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Integridade</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Responsabilidade</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Horários</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Segunda a Sexta | 08:00h às 18:00h</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Sábado | 08:00h às 13:00h</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Contatos</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1">
+            <a class="link-secondary text-decoration-none" href="#">Email: SGCM.django@gmail.com</a>
+          </li>
+          <li class="mb-1">
+            <a class="link-secondary text-decoration-none" href="#">Telefone: 99999999999</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
+    {% block scripts %}
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}" ></script>
+        <!-- Function closed message -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+            setTimeout(function() {
+                $('.messages').fadeOut('slow');
+            }, 4000);
+            });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    {% endblock %}
+
+
+    </body>
+</html>
